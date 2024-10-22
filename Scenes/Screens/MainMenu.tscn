@@ -1,25 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://clsg734308idf"]
+[gd_scene load_steps=5 format=3 uid="uid://b86b0yak15nww"]
 
-[ext_resource type="Script" path="res://Scripts/User Interface/MainMenu.gd" id="1_3nqhb"]
+[ext_resource type="Script" path="res://Scripts/User Interface/MainMenu_PR.gd" id="1_aca0t"]
 [ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Fonts/Quicksand-VariableFont_wght.ttf" id="2_5sicp"]
+[ext_resource type="PackedScene" path="res://Scenes/Screens/OptionsMenu.tscn" id="3_ybgo0"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_shfju"]
+[sub_resource type="LabelSettings" id="LabelSettings_7bs18"]
 font = ExtResource("2_5sicp")
 font_size = 35
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_y4l34"]
-font = ExtResource("2_5sicp")
-
-[node name="MainMenu" type="Control"]
+[node name="MainMenu_PR" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3nqhb")
+script = ExtResource("1_aca0t")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -43,48 +39,23 @@ alignment = 1
 [node name="LblTitle" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "GAME_TITLE"
-label_settings = SubResource("LabelSettings_shfju")
+label_settings = SubResource("LabelSettings_7bs18")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LblVersion" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "v10.10.2024a"
-label_settings = SubResource("LabelSettings_y4l34")
+text = "v22.10.2024a"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BtnStart" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "START_GAME"
-clip_text = true
 
 [node name="BtnOptions" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "GAME_OPTIONS"
-
-[node name="PopupMenu" type="PopupMenu" parent="Panel/VBoxContainer/BtnOptions"]
-size = Vector2i(450, 200)
-min_size = Vector2i(450, 200)
-max_size = Vector2i(450, 200)
-content_scale_aspect = 4
-allow_search = false
-item_count = 6
-item_0/text = "LANGUAGE_SELECTION"
-item_0/id = 0
-item_0/separator = true
-item_1/text = "LANGUAGE_EN"
-item_1/id = 1
-item_2/text = "LANGUAGE_ES"
-item_2/id = 2
-item_3/text = "SCREEN_OPTIONS"
-item_3/id = 0
-item_3/separator = true
-item_4/text = "FULLSCREEN_MODE"
-item_4/checkable = 1
-item_4/id = 3
-item_5/text = ""
-item_5/id = 5
 
 [node name="BtnExit" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -97,9 +68,11 @@ offset_right = 248.0
 offset_bottom = 99.0
 placeholder_text = "Level01"
 
-[node name="PopupMenu" type="PopupMenu" parent="."]
+[node name="OptionsMenu" parent="Panel" instance=ExtResource("3_ybgo0")]
+visible = false
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="button_down" from="Panel/VBoxContainer/BtnStart" to="." method="_on_btn_start_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/BtnOptions" to="." method="_on_btn_options_button_down"]
-[connection signal="id_pressed" from="Panel/VBoxContainer/BtnOptions/PopupMenu" to="." method="_on_popup_menu_id_pressed"]
 [connection signal="button_down" from="Panel/VBoxContainer/BtnExit" to="." method="_on_btn_exit_button_down"]
