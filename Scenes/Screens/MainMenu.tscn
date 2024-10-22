@@ -101,6 +101,7 @@ icon_alignment = 1
 
 [node name="BtnAbout" type="Button" parent="Panel/HBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 action_mode = 0
 icon = ExtResource("5_mcoqe")
 flat = true
@@ -108,6 +109,7 @@ icon_alignment = 1
 
 [node name="BtnCredits" type="Button" parent="Panel/HBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 action_mode = 0
 icon = ExtResource("6_03t3y")
 flat = true
@@ -124,18 +126,17 @@ grow_vertical = 2
 
 [node name="LblAbout" type="Label" parent="Panel/AboutPanel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 138.0
+offset_right = -137.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "ABOUT_TEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 2
 
 [node name="CreditsPanel" type="Panel" parent="Panel"]
 visible = false
@@ -148,18 +149,15 @@ grow_vertical = 2
 
 [node name="LblCredits" type="Label" parent="Panel/CreditsPanel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "CREDITS_TEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 2
 
 [connection signal="button_down" from="Panel/VBoxContainer/BtnStart" to="." method="_on_btn_start_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/BtnOptions" to="." method="_on_btn_options_button_down"]
