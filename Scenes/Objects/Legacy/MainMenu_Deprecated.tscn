@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://clsg734308idf"]
 
-[ext_resource type="Script" path="res://Scripts/User Interface/MainMenu.gd" id="1_fxame"]
+[ext_resource type="Script" path="res://Scenes/Objects/Legacy/MainMenu_Deprecated.gd" id="1_fxame"]
 [ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Fonts/Quicksand-VariableFont_wght.ttf" id="2_gspfw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_shfju"]
