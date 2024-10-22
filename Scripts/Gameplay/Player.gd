@@ -10,6 +10,7 @@ var original_fov : float
 var impulse_fov : float
 
 @onready var camera_3d = $"../CameraContainer/HRotation/VRotation/SpringArm3D/Camera3D"
+@onready var audioPlayer =$"../AudioStreamPlayer3D"
 @onready var original_time_scale : float = Engine.time_scale
 
 # Called when the node enters the scene tree for the first time.
@@ -54,6 +55,10 @@ func handle_impulse() -> void:
 	if Input.is_action_just_pressed("impulse"):
 		if(Gui._consume_stamina_progress_bar()):
 			Engine.time_scale = slowdown_factor
+			#Changing audio file to play
+			audioPlayer.stream = load("res://Sounds/camera-250776.mp3"  )
+			#Playing audio file
+			audioPlayer.play()
 			is_holding_impulse = true
 	
 	if Input.is_action_just_released("impulse"):
@@ -66,6 +71,10 @@ func handle_impulse() -> void:
 			is_holding_impulse = false
 		
 			apply_impulse(forward_direction * impulse_force)
+			#Changing audio file to play
+			audioPlayer.stream = load("res://Sounds/whoosh-metal-gate-247163.mp3")
+			#Playing audio file
+			audioPlayer.play()
 		else:
 			#the user cannot impulse
 			pass

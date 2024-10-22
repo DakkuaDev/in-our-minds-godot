@@ -7,12 +7,13 @@ LANGUAGE_ES,Spanish,Español
 LANGUAGE_EN,English,Inglés
 SCREEN_OPTIONS,Screen Options,Opciones de Pantalla
 FULLSCREEN_MODE,Fullscreen,Pantalla Completa
+SOUND_OPTIONS,Sound Options,Opciones de Sonido
+MASTER_SLIDER,General,General
+SFX_SLIDER,Sound Effects,Efectos de Sonido
+MUSIC_SLIDER,Music,Música
 EXIT_GAME,Exit Game,Salir del Juego
 PAUSE_GAME,Pause,Pausa
 CONTINUE_GAME,Continue,Continuar
-COLLECTIBLE_POPUP, Do you want to open the resource?, ¿Quieres abrir el recurso?
-COLLECTIBLE_YES, Yes, Si
-COLLECTIBLE_NO, No, No 
 EXIT_MAIN_MENU,Exit to Main Menu,Salir al Menu Principal
 LEVEL_1_NAME,Basic Movement,Movimiento Básico
 LEVEL_2_NAME,Basic Camera Turn,Movimiento Básico de Cámara

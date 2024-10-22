@@ -1,0 +1,136 @@
+[gd_scene load_steps=2 format=3 uid="uid://co66ka7y6etut"]
+
+[ext_resource type="Script" path="res://Scripts/User Interface/OptionsMenu.gd" id="1_k4yqp"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k4yqp")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.5
+offset_top = -125.5
+offset_right = 271.5
+offset_bottom = 125.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="LanguageSelection" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "LANGUAGE_SELECTION"
+
+[node name="LangugageSelectionContainer" type="GridContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 2
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/LangugageSelectionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "LANGUAGE_SELECTION"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/LangugageSelectionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 2
+selected = 0
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Spanish"
+popup/item_1/id = 1
+
+[node name="ScreenOptions" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "SCREEN_OPTIONS"
+
+[node name="ScreenOptionsContainer" type="GridContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 0
+columns = 2
+
+[node name="FullScreenModeLabel" type="Label" parent="Panel/VBoxContainer/ScreenOptionsContainer"]
+layout_mode = 2
+text = "FULLSCREEN_MODE"
+
+[node name="FullScreenMode" type="CheckBox" parent="Panel/VBoxContainer/ScreenOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="SoundOptions" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "SOUND_OPTIONS
+"
+
+[node name="SoundOptionsContainer" type="GridContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 0
+columns = 2
+
+[node name="Master" type="Label" parent="Panel/VBoxContainer/SoundOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MASTER_SLIDER"
+
+[node name="MasterSlider" type="HSlider" parent="Panel/VBoxContainer/SoundOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Music" type="Label" parent="Panel/VBoxContainer/SoundOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MUSIC_SLIDER"
+
+[node name="MusicSlider" type="HSlider" parent="Panel/VBoxContainer/SoundOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFX" type="Label" parent="Panel/VBoxContainer/SoundOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SFX_SLIDER"
+
+[node name="SFXSlider" type="HSlider" parent="Panel/VBoxContainer/SoundOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[connection signal="item_selected" from="Panel/VBoxContainer/LangugageSelectionContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="toggled" from="Panel/VBoxContainer/ScreenOptionsContainer/FullScreenMode" to="." method="_on_full_screen_mode_toggled"]
+[connection signal="value_changed" from="Panel/VBoxContainer/SoundOptionsContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/SoundOptionsContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/SoundOptionsContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]

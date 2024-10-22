@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-var LineDrawer = preload("res://Scripts/DrawLine3D.gd").new()
+#var LineDrawer = preload("res://Scripts/DrawLine3D.gd").new()
 
 @export var movement_speed : float = 385.0
 @export var max_speed : float = 7.5
@@ -16,7 +16,8 @@ var vertical_velocity : float = 0.0
 
 
 func _ready() -> void:
-	add_child(LineDrawer)
+	#add_child(LineDrawer)
+	pass
 
 func _physics_process(delta: float) -> void:
 	movement(delta)
@@ -73,11 +74,11 @@ func jump(delta : float) -> void:
 func is_on_ground() -> bool:
 	
 	# Draw raycast line (debug)
-	LineDrawer.DrawLine(
-		ray_cast_3d.position, 
-		ray_cast_3d.position + ray_cast_3d.target_position, 
-		Color.RED
-		)
+	#LineDrawer.DrawLine(
+		#ray_cast_3d.position, 
+		#ray_cast_3d.position + ray_cast_3d.target_position, 
+		#Color.RED
+		#)
 	
 	# Check raycast
 	if(ray_cast_3d.is_colliding()):

@@ -79,7 +79,6 @@ texture_progress = ExtResource("4_lngnv")
 [node name="CollectiblePopupMenu" type="PopupMenu" parent="PanelContainer"]
 initial_position = 1
 size = Vector2i(300, 100)
-visible = true
 item_count = 3
 item_0/text = "COLLECTIBLE_POPUP"
 item_0/id = 0

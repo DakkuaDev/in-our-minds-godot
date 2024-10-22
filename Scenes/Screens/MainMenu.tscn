@@ -65,12 +65,11 @@ text = "GAME_OPTIONS"
 
 [node name="PopupMenu" type="PopupMenu" parent="Panel/VBoxContainer/BtnOptions"]
 size = Vector2i(450, 200)
-visible = true
 min_size = Vector2i(450, 200)
 max_size = Vector2i(450, 200)
 content_scale_aspect = 4
 allow_search = false
-item_count = 5
+item_count = 6
 item_0/text = "LANGUAGE_SELECTION"
 item_0/id = 0
 item_0/separator = true
@@ -84,6 +83,8 @@ item_3/separator = true
 item_4/text = "FULLSCREEN_MODE"
 item_4/checkable = 1
 item_4/id = 3
+item_5/text = ""
+item_5/id = 5
 
 [node name="BtnExit" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -95,6 +96,8 @@ layout_mode = 0
 offset_right = 248.0
 offset_bottom = 99.0
 placeholder_text = "Level01"
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
 
 [connection signal="button_down" from="Panel/VBoxContainer/BtnStart" to="." method="_on_btn_start_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/BtnOptions" to="." method="_on_btn_options_button_down"]
