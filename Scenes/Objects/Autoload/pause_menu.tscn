@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://crghgtuhh56fe"]
+[gd_scene load_steps=4 format=3 uid="uid://crghgtuhh56fe"]
 
 [ext_resource type="Script" path="res://Scripts/User Interface/PauseMenu.gd" id="1_cg75c"]
+[ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Fonts/Quicksand-VariableFont_wght.ttf" id="2_k3gbe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kl5s2"]
+font = ExtResource("2_k3gbe")
+font_size = 30
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -34,6 +39,7 @@ alignment = 1
 [node name="LblTitle" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "PAUSE_GAME"
+label_settings = SubResource("LabelSettings_kl5s2")
 horizontal_alignment = 1
 vertical_alignment = 1
 

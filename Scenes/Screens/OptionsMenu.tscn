@@ -1,6 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://cls1e4ywuc8sl"]
+[gd_scene load_steps=11 format=3 uid="uid://cls1e4ywuc8sl"]
 
 [ext_resource type="Script" path="res://Scripts/User Interface/OptionsMenu.gd" id="1_k4yqp"]
+[ext_resource type="FontFile" uid="uid://cybtmyt2i1ijr" path="res://Fonts/static/Quicksand-Bold.ttf" id="2_msp8r"]
+[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Fonts/static/Quicksand-Regular.ttf" id="3_gkfl4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v2qbl"]
+font = ExtResource("2_msp8r")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wqy0a"]
+font = ExtResource("3_gkfl4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vey7k"]
+font = ExtResource("2_msp8r")
+
+[sub_resource type="LabelSettings" id="LabelSettings_1mobu"]
+font = ExtResource("3_gkfl4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vgh02"]
+font = ExtResource("3_gkfl4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_e131w"]
+font = ExtResource("3_gkfl4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_urr0r"]
+font = ExtResource("3_gkfl4")
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -38,16 +61,18 @@ theme_override_constants/separation = 10
 layout_mode = 2
 size_flags_horizontal = 4
 text = "LANGUAGE_SELECTION"
+label_settings = SubResource("LabelSettings_v2qbl")
 
 [node name="LangugageSelectionContainer" type="GridContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 columns = 2
 
-[node name="Label2" type="Label" parent="Panel/VBoxContainer/LangugageSelectionContainer"]
+[node name="LanguageSelectionLabel" type="Label" parent="Panel/VBoxContainer/LangugageSelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "LANGUAGE_SELECTION"
+label_settings = SubResource("LabelSettings_wqy0a")
 
 [node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/LangugageSelectionContainer"]
 layout_mode = 2
@@ -63,6 +88,7 @@ popup/item_1/id = 1
 layout_mode = 2
 size_flags_horizontal = 4
 text = "SCREEN_OPTIONS"
+label_settings = SubResource("LabelSettings_vey7k")
 
 [node name="ScreenOptionsContainer" type="GridContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -73,6 +99,7 @@ columns = 2
 [node name="FullScreenModeLabel" type="Label" parent="Panel/VBoxContainer/ScreenOptionsContainer"]
 layout_mode = 2
 text = "FULLSCREEN_MODE"
+label_settings = SubResource("LabelSettings_1mobu")
 
 [node name="FullScreenMode" type="CheckBox" parent="Panel/VBoxContainer/ScreenOptionsContainer"]
 layout_mode = 2
@@ -94,6 +121,7 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 text = "MASTER_SLIDER"
+label_settings = SubResource("LabelSettings_vgh02")
 
 [node name="MasterSlider" type="HSlider" parent="Panel/VBoxContainer/SoundOptionsContainer"]
 layout_mode = 2
@@ -107,6 +135,7 @@ value = 1.0
 layout_mode = 2
 size_flags_horizontal = 3
 text = "MUSIC_SLIDER"
+label_settings = SubResource("LabelSettings_e131w")
 
 [node name="MusicSlider" type="HSlider" parent="Panel/VBoxContainer/SoundOptionsContainer"]
 layout_mode = 2
@@ -120,6 +149,7 @@ value = 1.0
 layout_mode = 2
 size_flags_horizontal = 3
 text = "SFX_SLIDER"
+label_settings = SubResource("LabelSettings_urr0r")
 
 [node name="SFXSlider" type="HSlider" parent="Panel/VBoxContainer/SoundOptionsContainer"]
 layout_mode = 2
