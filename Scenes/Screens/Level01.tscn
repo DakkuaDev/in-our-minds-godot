@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://cr03r0scljmbw"]
 
 [ext_resource type="Texture2D" uid="uid://dskx7olfigtja" path="res://Textures/Skybox/Cold Sunset Equirect.png" id="1_sxdx6"]
-[ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Scenes/Objects/player.tscn" id="2_dgumc"]
+[ext_resource type="PackedScene" uid="uid://dl1udnn5fcbpa" path="res://Scenes/Objects/Player Skins/player_skin01.tscn" id="2_rx5kj"]
 [ext_resource type="PackedScene" uid="uid://d22r677i78v52" path="res://Scenes/Objects/goal.tscn" id="3_e01xg"]
 [ext_resource type="PackedScene" uid="uid://du8na0oacq85n" path="res://Scenes/Objects/description.tscn" id="4_syc1t"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="5_ib165"]
@@ -165,8 +165,8 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 
 environment = SubResource("Environment_g5eta")
 camera_attributes = SubResource("CameraAttributesPractical_ac1u7")
 
-[node name="Player" parent="." instance=ExtResource("2_dgumc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69074, 0.788564, -0.0351393)
+[node name="Player" parent="." instance=ExtResource("2_rx5kj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69352, 0.985741, -0.0355541)
 
 [node name="Goal" parent="." instance=ExtResource("3_e01xg")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.80701, 0.352964, 0)

@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://dl1udnn5fcbpa"]
+
+[ext_resource type="Script" path="res://Scripts/Gameplay/Player.gd" id="1_vuk5c"]
+[ext_resource type="Texture2D" uid="uid://uhpfoqj2x4cv" path="res://Textures/Player/EstigmaDuda_ball_texture.png" id="2_p2vam"]
+[ext_resource type="Texture2D" uid="uid://4ri4yrdjf06h" path="res://Textures/Player/EstigmaDuda_texture.png" id="3_pmpxn"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/Camera.gd" id="5_2ped3"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qcqbx"]
+bounce = 0.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_55v3s"]
+radius = 0.123988
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xxfhp"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.72549)
+albedo_texture = ExtResource("2_p2vam")
+
+[sub_resource type="SphereMesh" id="SphereMesh_hj62t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7hw1"]
+render_priority = 1
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.784314)
+albedo_texture = ExtResource("3_pmpxn")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_5y7yy"]
+size = Vector2(0.7, 0.7)
+
+[node name="Player" type="Node3D" groups=["Player"]]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+bus = &"SFX"
+
+[node name="Marble" type="RigidBody3D" parent="." groups=["Player"]]
+physics_material_override = SubResource("PhysicsMaterial_qcqbx")
+gravity_scale = 0.9
+linear_damp = 0.8
+script = ExtResource("1_vuk5c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Marble"]
+shape = SubResource("SphereShape3D_55v3s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Marble"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_xxfhp")
+mesh = SubResource("SphereMesh_hj62t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Marble/MeshInstance3D"]
+transform = Transform3D(0.11778, 0, -0.99304, 0, 1, 0, 0.99304, 0, 0.11778, 0.00471687, -0.00477791, 0.00109541)
+material_override = SubResource("StandardMaterial3D_t7hw1")
+mesh = SubResource("QuadMesh_5y7yy")
+
+[node name="CameraContainer" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("5_2ped3")
+
+[node name="HRotation" type="Node3D" parent="CameraContainer"]
+
+[node name="VRotation" type="Node3D" parent="CameraContainer/HRotation"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraContainer/HRotation/VRotation"]
+spring_length = 1.5
+margin = 1.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraContainer/HRotation/VRotation/SpringArm3D"]
+current = true

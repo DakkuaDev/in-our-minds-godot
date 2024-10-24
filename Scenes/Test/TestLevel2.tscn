@@ -1,6 +1,6 @@
 [gd_scene load_steps=77 format=3 uid="uid://bjben8c65s0c7"]
 
-[ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Scenes/Objects/player.tscn" id="2_qnbwd"]
+[ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Scenes/Objects/player_base.tscn" id="2_qnbwd"]
 [ext_resource type="PackedScene" uid="uid://d22r677i78v52" path="res://Scenes/Objects/goal.tscn" id="3_v4e4y"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="5_cr73q"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="6_yqk6f"]

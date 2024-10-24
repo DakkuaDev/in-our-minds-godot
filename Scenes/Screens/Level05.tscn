@@ -1,7 +1,7 @@
 [gd_scene load_steps=1800 format=3 uid="uid://b2uhwrvlemfyi"]
 
 [ext_resource type="Texture2D" uid="uid://chsdvl382yh2f" path="res://Textures/Skybox/Epic_BlueSunset_EquiRect_flat.png" id="1_s0mr3"]
-[ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Scenes/Objects/player.tscn" id="2_j2ltc"]
+[ext_resource type="PackedScene" uid="uid://ci32kasnbuftn" path="res://Scenes/Objects/Player Skins/player_skin03.tscn" id="2_keyx3"]
 [ext_resource type="PackedScene" uid="uid://d22r677i78v52" path="res://Scenes/Objects/goal.tscn" id="3_eiebw"]
 [ext_resource type="PackedScene" uid="uid://du8na0oacq85n" path="res://Scenes/Objects/description.tscn" id="4_shvsd"]
 [ext_resource type="PackedScene" uid="uid://dhaxydo1yrweq" path="res://Scenes/Objects/collectible.tscn" id="5_p6vjb"]
@@ -17984,7 +17984,7 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 
 environment = SubResource("Environment_g5eta")
 camera_attributes = SubResource("CameraAttributesPractical_ac1u7")
 
-[node name="Player" parent="." instance=ExtResource("2_j2ltc")]
+[node name="Player" parent="." instance=ExtResource("2_keyx3")]
 transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 20.9874, 0.255216, 10.6195)
 
 [node name="Goal" parent="." instance=ExtResource("3_eiebw")]
