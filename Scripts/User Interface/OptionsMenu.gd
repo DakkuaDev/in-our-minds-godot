@@ -5,6 +5,9 @@ extends Control
 @onready var sfxBus = AudioServer.get_bus_index("SFX")
 @onready var musicBus = AudioServer.get_bus_index("Music")
 
+@onready var flag_sprite_2d = $Panel/Panel/VBoxContainer/LangugageSelectionContainer/FlagSprite2D
+
+
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		self.visible = false
@@ -12,8 +15,13 @@ func _input(event):
 
 func _on_option_button_item_selected(index):
 		match index:
-			0: TranslationServer.set_locale("en")
-			1: TranslationServer.set_locale("es") 
+			0: 
+				TranslationServer.set_locale("en")
+				flag_sprite_2d.texture = preload("res://Textures/User Interface/en-flag.png")
+				
+			1: 
+				TranslationServer.set_locale("es") 
+				flag_sprite_2d.texture = preload("res://Textures/User Interface/es-flag.png")
 		pass 
 
 func _on_full_screen_mode_toggled(toggled_on):

@@ -17993,12 +17993,11 @@ top_level = false
 next_scene_is_chapter_menu = true
 
 [node name="Description" parent="." instance=ExtResource("4_shvsd")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 15.1632, -0.53551, 8.0962)
-visible = false
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.37218, 2.54565, 8.30551)
 description = "LEVEL_5_DESCRIPTION"
 
 [node name="Collectible" parent="." instance=ExtResource("5_p6vjb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4127, 3.13542, 10.9053)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4601, 0.186206, 10.9053)
 url = "los-ataques-de-panico"
 
 [node name="Blocking" type="Node" parent="."]

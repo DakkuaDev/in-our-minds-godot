@@ -63,6 +63,7 @@ func _update_scene_name(current_index : int) -> String:
 		1: return tr("LEVEL_2_NAME")
 		2: return tr("LEVEL_3_NAME")
 		3: return tr("LEVEL_4_NAME")
+		4: return tr("LEVEL_5_NAME")
 	return "null"
 	
 	pass
