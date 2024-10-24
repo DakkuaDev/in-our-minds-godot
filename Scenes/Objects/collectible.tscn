@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhaxydo1yrweq"]
+[gd_scene load_steps=7 format=3 uid="uid://dhaxydo1yrweq"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Collectible.gd" id="1_s46d5"]
+[ext_resource type="AudioStream" uid="uid://dnetj4il4nd84" path="res://Sounds/level-up-3-199576.mp3" id="2_hu1y0"]
 [ext_resource type="Texture2D" uid="uid://80xlvy4itfg6" path="res://Textures/Objects/collectible_sprite.png" id="2_oaoq8"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6tgex"]
@@ -18,6 +19,11 @@ billboard_keep_scale = true
 
 [node name="Collectible" type="Node3D"]
 script = ExtResource("1_s46d5")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_hu1y0")
+pitch_scale = 1.5
+bus = &"SFX"
 
 [node name="Area3D" type="Area3D" parent="."]
 

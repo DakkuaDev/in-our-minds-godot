@@ -9,8 +9,11 @@ extends Control
 
 @onready var optionsMenu: Control = $Panel/OptionsMenu
 
-@onready var about_panel = $Panel/AboutPanel
-@onready var credits_panel = $Panel/CreditsPanel
+@onready var about_panel : Panel = $Panel/AboutPanel
+@onready var credits_panel : Panel = $Panel/CreditsPanel
+
+@onready var audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
+
 
 const FULL_SCREEN_INDEX : int = 4
 
@@ -23,8 +26,12 @@ func _process(delta):
 	if Input.is_action_just_pressed("exit"):
 		about_panel.visible = false
 		credits_panel.visible = false
+		
+	pass
 
 func _on_btn_start_button_down() -> void:
+	_on_play_button_sound()
+	
 	if(on_debug_mode): # debug mode
 		GameManager._start_game(debug_next_level.text)
 	else:
@@ -33,6 +40,8 @@ func _on_btn_start_button_down() -> void:
 	pass
 
 func _on_btn_options_button_down() -> void:
+	_on_play_button_sound()
+	
 	optionsMenu.visible = true
 	
 	pass 
@@ -50,22 +59,36 @@ func _on_fullscreen() -> void:
 	pass
 	
 func _on_btn_exit_button_down() -> void:
+	_on_play_button_sound()
+	
 	GameManager._exit_game()
 	
 	pass
 	
 func _on_btn_github_button_down() -> void:
+	_on_play_button_sound()
+	
 	OS.shell_open("https://github.com/DakkuaDev/in-our-minds-godot")
 	
 	pass 
 	
 func _on_btn_about_button_down() -> void:
+	_on_play_button_sound()
+	
 	about_panel.visible = true
 	
 	pass 
 
 
 func _on_btn_credits_button_down() -> void:
+	_on_play_button_sound()
+	
 	credits_panel.visible = true
 	
 	pass 
+	
+func _on_play_button_sound() -> void:
+		var rng = RandomNumberGenerator.new()
+		
+		audio_stream_player.pitch_scale = rng.randf_range(1,2.5)
+		audio_stream_player.play()

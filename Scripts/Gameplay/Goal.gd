@@ -15,6 +15,8 @@ extends Node3D
 @export var clickable: bool = false
 @export var add_to_back: bool = true
 
+@onready var audio_stream_player_3d : AudioStreamPlayer3D = $AudioStreamPlayer3D
+
 @onready var fade_out_options = SceneManager.create_options(fade_out_speed, fade_out_pattern, fade_out_smoothness, fade_out_inverted)
 @onready var fade_in_options = SceneManager.create_options(fade_in_speed, fade_in_pattern, fade_in_smoothness, fade_in_inverted)
 @onready var general_options = SceneManager.create_general_options(color, timeout, clickable, add_to_back)
@@ -33,6 +35,7 @@ func _ready() -> void:
 	
 func _on_area_3d_body_entered(body) -> void:
 	if body.is_in_group("Player"):
+		audio_stream_player_3d.play()
 		_go_next_level()
 			
 	pass

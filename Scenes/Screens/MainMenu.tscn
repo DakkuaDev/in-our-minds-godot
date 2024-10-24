@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b86b0yak15nww"]
+[gd_scene load_steps=9 format=3 uid="uid://b86b0yak15nww"]
 
 [ext_resource type="Script" path="res://Scripts/User Interface/MainMenu.gd" id="1_aca0t"]
+[ext_resource type="AudioStream" uid="uid://bil3plmymhbr7" path="res://Sounds/click-button-140881.mp3" id="2_01ufo"]
 [ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Fonts/Quicksand-VariableFont_wght.ttf" id="2_5sicp"]
 [ext_resource type="PackedScene" uid="uid://cls1e4ywuc8sl" path="res://Scenes/Screens/OptionsMenu.tscn" id="3_ybgo0"]
 [ext_resource type="Texture2D" uid="uid://6ie3u6wa5fv" path="res://Textures/User Interface/github-icon.png" id="4_jkvmc"]
@@ -19,6 +20,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aca0t")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_01ufo")
+bus = &"SFX"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

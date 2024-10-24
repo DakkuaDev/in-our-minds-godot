@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://du8na0oacq85n"]
+[gd_scene load_steps=7 format=3 uid="uid://du8na0oacq85n"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Description.gd" id="1_3mdlr"]
+[ext_resource type="AudioStream" uid="uid://dnetj4il4nd84" path="res://Sounds/level-up-3-199576.mp3" id="2_ck0wy"]
 [ext_resource type="Texture2D" uid="uid://dsb2fgahfqpfg" path="res://Textures/Objects/description_sprite.png" id="2_opfhn"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6tgex"]
@@ -17,6 +18,11 @@ billboard_keep_scale = true
 [node name="Description" type="Node3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_3mdlr")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+stream = ExtResource("2_ck0wy")
+bus = &"SFX"
 
 [node name="Area3D" type="Area3D" parent="."]
 

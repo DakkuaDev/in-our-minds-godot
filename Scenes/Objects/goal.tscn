@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d22r677i78v52"]
+[gd_scene load_steps=9 format=3 uid="uid://d22r677i78v52"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Goal.gd" id="1_wqm5o"]
 [ext_resource type="Texture2D" uid="uid://ca3dcc6bb5n75" path="res://Textures/Player/goal_texture.jpg" id="2_3cw3f"]
+[ext_resource type="AudioStream" uid="uid://dineqagf4oq32" path="res://Sounds/game-level-complete-143022.mp3" id="2_opnkr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q6162"]
 
@@ -34,6 +35,13 @@ _data = {
 [node name="Goal" type="Node3D"]
 top_level = true
 script = ExtResource("1_wqm5o")
+fade_out_speed = 1.75
+fade_in_speed = 1.75
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_opnkr")
+volume_db = -15.0
+bus = &"SFX"
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(0.75, -6.25859e-08, 2.73572e-15, 0, -3.27835e-08, -0.75, 6.25859e-08, 0.75, -3.27835e-08, 0, 0, 0)
