@@ -9,7 +9,8 @@ extends Control
 @onready var collectible_popup_menu : PopupMenu = $PanelContainer/CollectiblePopupMenu
 
 
-var action_popup_url : String = "https://entiendetumente.info/"
+var action_popup_base_url : String = "https://entiendetumente.info/"
+var url = ""
 
 
 func _ready():
@@ -46,10 +47,10 @@ func _on_show_description(messg : String, state: bool) -> void:
 	
 	pass
 	
-func _on_show_collectible(url : String, state: bool) -> void:
+func _on_show_collectible(endpoint : String, state: bool) -> void:
 	if(state): 
 		collectible_popup_menu.show()
-		action_popup_url += url
+		url = action_popup_base_url + endpoint
 	else: 
 		collectible_popup_menu.hide()
 	
@@ -79,7 +80,7 @@ func _reset_stamina_progress_bar() -> void:
 func _on_popup_menu_id_pressed(id):
 	match(id):
 		1: 
-			OS.shell_open(action_popup_url)
+			OS.shell_open(url)
 		2: 
 			_on_show_collectible("", false)
 		

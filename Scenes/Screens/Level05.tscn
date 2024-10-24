@@ -17997,8 +17997,8 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.37218, 2.54565, 8.305
 description = "LEVEL_5_DESCRIPTION"
 
 [node name="Collectible" parent="." instance=ExtResource("5_p6vjb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4601, 0.186206, 10.9053)
-url = "los-ataques-de-panico"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4601, -0.36891, 10.9053)
+url = "los-ataques-de-panico/"
 
 [node name="Blocking" type="Node" parent="."]
 
