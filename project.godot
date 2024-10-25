@@ -22,10 +22,10 @@ buses/default_bus_layout="res://Config/default_bus_layout.tres"
 [autoload]
 
 CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
-DrawLine3d="*res://Scenes/Objects/Legacy/DrawLine3D.gd"
 SceneManager="*res://addons/scene_manager/scene_manager.tscn"
 Scenes="*res://addons/scene_manager/scenes.gd"
 Gui="*res://Scenes/Objects/Autoload/gui.tscn"
+AudioManager="*res://Scenes/Objects/Autoload/audio_manager.tscn"
 GameManager="*res://Scenes/Objects/Autoload/game_manager.tscn"
 PauseMenu="*res://Scenes/Objects/Autoload/pause_menu.tscn"
 

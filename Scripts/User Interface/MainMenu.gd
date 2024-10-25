@@ -17,6 +17,9 @@ extends Control
 
 const FULL_SCREEN_INDEX : int = 4
 
+func _ready():
+	AudioManager.play_music("music_theme_01", true, true, true, 2.0)
+
 func _process(delta):
 	#debug mode
 	if Input.is_action_just_pressed("DEBUG_MODE"):

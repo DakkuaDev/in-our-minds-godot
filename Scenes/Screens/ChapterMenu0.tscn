@@ -18,6 +18,7 @@ grow_vertical = 2
 script = ExtResource("1_2ehpc")
 scene = "Level01"
 first_scene = true
+music_to_play = "music_theme_03"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

@@ -18,6 +18,7 @@ grow_vertical = 2
 script = ExtResource("1_gfd4o")
 scene = "MainMenu"
 timer_time = 0.0
+music_to_play = "music_theme_05"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

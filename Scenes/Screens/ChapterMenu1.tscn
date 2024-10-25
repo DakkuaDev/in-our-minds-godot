@@ -17,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ai25w")
 scene = "Level04"
+music_to_play = "music_theme_02"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
