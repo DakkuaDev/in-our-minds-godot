@@ -19,4 +19,4 @@ music_library = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -35.0
-bus = &"Music"
+bus = &"SFX"

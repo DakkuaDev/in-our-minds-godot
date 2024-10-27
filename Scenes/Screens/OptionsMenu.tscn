@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cls1e4ywuc8sl"]
+[gd_scene load_steps=13 format=3 uid="uid://cls1e4ywuc8sl"]
 
 [ext_resource type="Script" path="res://Scripts/User Interface/OptionsMenu.gd" id="1_k4yqp"]
 [ext_resource type="FontFile" uid="uid://cybtmyt2i1ijr" path="res://Fonts/static/Quicksand-Bold.ttf" id="2_msp8r"]
+[ext_resource type="AudioStream" uid="uid://cs71wit0myv4f" path="res://Sounds/cardsound32562-37691.mp3" id="2_ou2ju"]
 [ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Fonts/static/Quicksand-Regular.ttf" id="3_gkfl4"]
 [ext_resource type="Texture2D" uid="uid://c7au12xkkwvb0" path="res://Textures/User Interface/en-flag.png" id="5_lo6ay"]
 
@@ -34,6 +35,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k4yqp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ou2ju")
+bus = &"SFX"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -148,12 +153,14 @@ step = 0.05
 value = 1.0
 
 [node name="Music" type="Label" parent="Panel/Panel/VBoxContainer/SoundOptionsContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 text = "MUSIC_SLIDER"
 label_settings = SubResource("LabelSettings_e131w")
 
 [node name="MusicSlider" type="HSlider" parent="Panel/Panel/VBoxContainer/SoundOptionsContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -171,9 +178,9 @@ label_settings = SubResource("LabelSettings_urr0r")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-max_value = 1.0
-step = 0.05
-value = 1.0
+max_value = 10.0
+step = 0.5
+value = 10.0
 
 [connection signal="item_selected" from="Panel/Panel/VBoxContainer/LangugageSelectionContainer/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="toggled" from="Panel/Panel/VBoxContainer/ScreenOptionsContainer/FullScreenMode" to="." method="_on_full_screen_mode_toggled"]

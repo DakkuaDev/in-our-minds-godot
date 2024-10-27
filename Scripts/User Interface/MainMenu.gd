@@ -9,8 +9,7 @@ extends Control
 
 @onready var optionsMenu: Control = $Panel/OptionsMenu
 
-@onready var about_panel : Panel = $Panel/AboutPanel
-@onready var credits_panel : Panel = $Panel/CreditsPanel
+@onready var about_panel = $Panel/AboutPanel
 
 @onready var audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
 
@@ -28,7 +27,6 @@ func _process(delta):
 		
 	if Input.is_action_just_pressed("exit"):
 		about_panel.visible = false
-		credits_panel.visible = false
 		
 	pass
 
@@ -82,14 +80,6 @@ func _on_btn_about_button_down() -> void:
 	
 	pass 
 
-
-func _on_btn_credits_button_down() -> void:
-	_on_play_button_sound()
-	
-	credits_panel.visible = true
-	
-	pass 
-	
 func _on_play_button_sound() -> void:
 		var rng = RandomNumberGenerator.new()
 		
