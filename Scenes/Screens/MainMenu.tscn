@@ -62,7 +62,7 @@ vertical_alignment = 1
 
 [node name="LblVersion" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "v22.10.2024a"
+text = "v27.10.2024a"
 horizontal_alignment = 1
 vertical_alignment = 1
 
