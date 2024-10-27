@@ -7,7 +7,7 @@ LANGUAGE_ES,Spanish,Español
 LANGUAGE_EN,English,Inglés
 SCREEN_OPTIONS,Screen Options,Opciones de Pantalla
 FULLSCREEN_MODE,Fullscreen,Pantalla Completa
-SOUND_OPTIONS,Sound Options,Opciones de Sonido
+SOUND_SETTINGS,Sound Options,Opciones de Sonido
 MASTER_SLIDER,General,General
 SFX_SLIDER,Sound Effects,Efectos de Sonido
 MUSIC_SLIDER,Music,Música
@@ -25,8 +25,8 @@ La demo jugable, aunque sencilla en su presentación, tiene como propósito demo
 Además, este proyecto incorpora recursos en formato de podcast pertenecientes al programa ""Entiende Tu Mente"", cuyos derechos son propiedad de ETM. Estos recursos se han utilizado exclusivamente con fines demostrativos dentro de la demo jugable.\n
 
 Invitamos a la comunidad a colaborar, ya sea reportando errores, sugiriendo mejoras o planteando dudas. Para cualquier tipo de consulta, se puede contactar conmigo directamente a través del repositorio de Github o vía email en daniel.guerra.gallardo99@gmail.com (@DakkuaDev)."
-CREDITS_TEXT,"Daniel Guerra (@DakkuaDev) - Developer\nSandro Alvoz(@sandroalvoz) - Assistant Developer\nPablo López - 3D Art and Textures\nÁngel Guerra - User Interface Elements\n\nblackears (@blackears) - cyclopsLevelBuilder addon\nMahmood (@maktoobgar) - scene_manager addon\n\nEntiende Tu Mente, ETM - Podcast
-","Daniel Guerra (@DakkuaDev) - Desarrollador\nSandro Alvoz(@sandroalvoz) - Desarrollador Asistente\nPablo López - Arte 3D y Texturas\nÁngel Guerra - Elementos de Interfaz Gráfica\n\nblackears (@blackears) - cyclopsLevelBuilder addon\nMahmood (@maktoobgar) - scene_manager addon\n\nEntiende Tu Mente, ETM - Podcast"
+CREDITS_TEXT,"Daniel Guerra (@DakkuaDev) - Developer\nSandro Alvoz(@sandroalvoz) - Assistant Developer\nPablo López - 3D Art and Textures\nÁngel Guerra - User Interface Elements\n\nblackears (@blackears) - cyclopsLevelBuilder addon\nMahmood (@maktoobgar) - scene_manager addon\n\n Music and https://pixabay.com/ - Sound Effects\nEntiende Tu Mente, ETM - Podcast (Resources)
+","Daniel Guerra (@DakkuaDev) - Desarrollador\nSandro Alvoz(@sandroalvoz) - Desarrollador Asistente\nPablo López - Arte 3D y Texturas\nÁngel Guerra - Elementos de Interfaz Gráfica\n\nblackears (@blackears) - cyclopsLevelBuilder addon\nMahmood (@maktoobgar) - scene_manager addon\n\n https://pixabay.com/ - Música y Efectos Sonoros\n Entiende Tu Mente, ETM - Podcast (Recursos)"
 PAUSE_GAME,Pause,Pausa
 CONTINUE_GAME,Continue,Continuar
 EXIT_MAIN_MENU,Exit to Main Menu,Salir al Menu Principal
@@ -45,6 +45,7 @@ LEVEL_3_DESCRIPTION,You can get an extra boost if you hold the 'Space bar' and r
 LEVEL_4_DESCRIPTION,"Remember, you can restart the level at any time by pressing the 'R' key. The impulses are recharged when you restart. The difficulty will progressively increase. There is also a collectible in each level that links to a mental health resource - try to find it! ","Recuerda, puedes reiniciar el nivel en cualquier momento pulsando la tecla 'R'. Los impulsos se te recargan al reiniciar. La dificultad aumentará progresivamente. Además en cada nivel existe un coleccionable que enlaza con un recurso sobre salud mental. ¡Intenta encontrarlo! "
 LEVEL_5_DESCRIPTION," Don't despair! If you fall in some sections you will have some way or another to try again without the need to restart. Try to supply your impulses well and you will be able to complete it. Like the previous level, there is a hidden resource.
 ","¡No desesperes! Si te caes en algunas secciones tendrás alguna forma u otra de volver a intentarlo sin necesidad de reiniciar. Trata de suministrar bien tus impulsos y serás capaz de completarlo. Al igual que el anterior nivel, existe un recursos escondido."
+LEVEL_5_2_DESCRIPTION,Only one can give you the boost needed to reach the next platform. It may require some extra effort on your part.,Solamente una puede darte el impulso necesario para llegar hasta la siguiente plataforma. Puede que requiera un impulso adicional por tu parte.
 CHAPTER_0,"Chapter 0: Tutorial\n
 Get acquainted with the basic game mechanics before diving into your adventure. Learn how to move, interact, and overcome challenges to better prepare yourself for what lies ahead. This tutorial will guide you step-by-step, ensuring you master the essential skills needed to progress in the game.","Capítulo 0: Tutorial\n
 Familiarízate con las mecánicas básicas del juego antes de comenzar tu aventura. Aprende a moverte, interactuar y superar desafíos para prepararte mejor para lo que está por venir. Este tutorial te guiará paso a paso, asegurando que entiendas las habilidades esenciales necesarias para progresar en el juego."
@@ -53,4 +54,9 @@ To experience feelings, a nervous system capable of projecting emotions into int
 
 ","Capítulo 1: El Cerebro, Teatro de las Emociones\n
 Para experimentar sentimientos, es fundamental un sistema nervioso capaz de proyectar emociones en imágenes internas. El cerebro actúa como un escenario donde se desarrollan nuestras emociones, dándoles forma y significado. Y, por último, pero no menos importante: debemos ser conscientes de nosotros mismos, de nuestra propia identidad, para poder procesar y comprender esas emociones. Sin esa autoconciencia, los sentimientos quedarían atrapados en un vacío sin sentido."
-CHAPTER_2,Thanks for playing!,¡Gracias por Jugar!
+CHAPTER_2,"Chapter 2: Navigating the Inner Storm\n
+
+Understanding our negative emotions is as essential as recognizing the positive ones. The brain also acts as a stage where these emotions take shape, sometimes as deep, heavy shadows. Accepting and observing them allows us to find meaning amid pain or anxiety. However, when these emotions overwhelm us and block our path, therapeutic support can become a necessary compass. Recognizing when to seek help is an act of courage and self-care, a way to bring light to the inner storm.","Capítulo 2: Navegando la Tormenta Interior\n
+
+Comprender nuestras emociones negativas es tan esencial como reconocer las positivas. El cerebro también funciona como un escenario donde esas emociones toman forma, a veces como sombras profundas y pesadas. Aceptarlas y observarlas nos permite encontrar significado en medio del dolor o la ansiedad. Sin embargo, cuando esas emociones nos desbordan y bloquean nuestro camino, el apoyo terapéutico puede convertirse en una brújula necesaria. Reconocer cuándo pedir ayuda es un acto de valentía y de cuidado hacia nosotros mismos, una forma de encender una luz en la tormenta interna."
+CHAPTER_3,Thanks for playing!,¡Gracias por Jugar!

@@ -129,8 +129,7 @@ size_flags_horizontal = 10
 [node name="SoundOptions" type="Label" parent="Panel/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "SOUND_OPTIONS
-"
+text = "SOUND_SETTINGS"
 
 [node name="SoundOptionsContainer" type="GridContainer" parent="Panel/Panel/VBoxContainer"]
 layout_mode = 2

@@ -11,7 +11,8 @@ extends Control
 @onready var lbl_title : Label = $Panel/VBoxContainer/LblTitle
 
 func _ready():
-	AudioManager.play_music(music_to_play, true, true, true, 2.0)
+	if(music_to_play != ""):
+		AudioManager.play_music(music_to_play, true, true, true, 2.0)
 	
 	timer.start(timer_time)
 	btn_start.visible = false

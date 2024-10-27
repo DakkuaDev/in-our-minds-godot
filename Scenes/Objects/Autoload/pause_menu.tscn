@@ -59,16 +59,7 @@ text = "EXIT_MAIN_MENU"
 
 [node name="OptionsMenu" parent="Panel" instance=ExtResource("3_j8rll")]
 visible = false
-layout_mode = 2
-anchors_preset = 0
-anchor_left = -0.2575
-anchor_top = -0.506944
-anchor_right = 0.7425
-anchor_bottom = 0.493056
-offset_left = 309.0
-offset_top = 365.0
-offset_right = 309.0
-offset_bottom = 365.0
+layout_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="button_down" from="Panel/VBoxContainer/BtnContinue" to="." method="_on_btn_continue_button_down"]
