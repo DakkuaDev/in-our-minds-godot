@@ -1,33 +1,31 @@
 # In our Minds 
 
-In our Minds(Provisional Title), is a **casual-platform videogame**, developed in **Godot Engine 4.0 and GDScript** that tells, through the different scenarios, how complex human emotions are.
+In Our Minds (Provisional Title) is a development framework in Godot Engine 4.0 designed for game creators interested in exploring deep, engaging narratives. This project serves as both a solid structural template and a demo that showcases its capabilities, ideal for casual platformer games with emotional depth.
 
 
-## Introduction
+## Project Overview
 
-Inside you is a world of thoughts and emotions, some familiar and some mysterious. You must navigate through them, overcoming the obstacles that the mind itself creates. Every step is an opportunity to understand and move forward.
+In Our Minds leverages the power of Godot and GDScript to represent the complex emotional landscapes that exist within us all. Each level, designed to function on a casual platform, symbolizes aspects of the human mind, delivering a reflective experience through meaningful yet simple mechanics.
 
-[![diM0f1t.md.png](https://iili.io/diM0f1t.md.png)](https://freeimage.host/i/diM0f1t)
+Project Components:
 
-If you want to explore more about the story, mechanics, project vision, art style, and more take a look:
-[One Pager Design Document](https://docs.google.com/document/d/1IFXtjuVabRxfs5BDGFTM4EodXScg6qZq5i2X_m0mhg4/edit?usp=sharing)
+Full Game Demo: Explore the framework's potential in a demo that integrates its main features.
+Customizable Framework: Use this modular development structure as a base for your own game or as a foundation for new ideas.
 
 ## Installation
 
-The project has a prototype version showing some of its main mechanics and handling.
-
-Go to the [**Releases**](https://github.com/DakkuaDev/in-our-minds-godot/releases) section and download the latest version available.
+Download the latest framework and demo release from the Releases section to start exploring its capabilities.
 
 
 ## Run Locally
 
-Clone the project
+1. Clone the project
 
 ```bash
   git clone https://link-to-project
 ```
 
-Go to the project directory
+2. Go to the project directory
 
 ```bash
   cd my-project
@@ -35,46 +33,23 @@ Go to the project directory
 
 ## Contribute
 
-As this is an open project but belongs to a [GameJam](https://itch.io/jam/mental-health-game-dev-champions-2024), you must let me know beforehand, if you meet any of the required profiles. If I give you permissions you can clone the repository on your site. At most, **a group of 6 contributors can be formed.**
+This framework is continually evolving and is part of an ongoing GameJam. Before contributing, please review the required contributor profiles and confirm with me if you meet any of them.
 
-To get started, you need to work on [Godot 4.2 stable](https://godotengine.org/download/archive/4.2-stable/)
-
-The project uses the [cyclopsLevelBuilder](https://github.com/blackears/cyclopsLevelBuilder) library dependency for level design and prototyping. 
-
-Pending developments are marked in the **Roadmap** section. Look at that section before deciding what you want to help with.
-
-If you make any changes you have two ways to notify me:
-
-- Via a **Pull request** as a separate development branch with the feature or change you want to be integrated. I will manually review it to make sure it is compliant, compatible and functional before integrating it into main.
-
-- Manually, notifying me via **MD on Discord** (dakkuadev)
-
-**Don't use the main branch for development**, always make a copy of the project and create your own branch.
-
-`feature/level-design` `feature/fix-movement` 
-
-If you have doubts about how to do this, please contact me.
+Contributor Guidelines
+Engine Requirement: Godot 4.2 Stable
+Dependencies: The project uses cyclopsLevelBuilder for level design and prototyping.
+Contribution Process: Work on a separate branch and create a Pull Request for your development. Alternatively, reach out to me on Discord: dakkuadev
 
 ## Roadmap
 
-These are some of the key areas:
-- Level design
-- Gameplay development
-- Audio and Sound effects
-- User Interface
-- Game localization
-- Bugs and Issues
+Key areas for future improvements and contributions include:
 
-The different tasks and developments available are in the [**Issues**](https://github.com/DakkuaDev/in-our-minds-godot/issues) section of the repository. 
+Level design and mechanics.
+Gameplay development.
+Audio and sound effects.
+User interface.
+Game localization and translation.
+Bug fixes and optimization.
+Check the Issues section for current tasks and known issues.
 
-## Screenshots
-
-[![diM8HKu.md.jpg](https://iili.io/diM8HKu.md.jpg)](https://freeimage.host/i/diM8HKu)
-
-[![diMSTB9.md.jpg](https://iili.io/diMSTB9.md.jpg)](https://freeimage.host/i/diMSTB9)
-
-
-## License
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
+ [**Issues**](https://github.com/DakkuaDev/in-our-minds-godot/issues) section of the repository. 
