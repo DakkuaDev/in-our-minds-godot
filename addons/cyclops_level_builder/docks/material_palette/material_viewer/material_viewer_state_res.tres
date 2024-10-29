@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_3sifp")
-active_material_path = "res://Materials/ground_02.tres"
+active_material_path = "res://Demo Game/Materials/ground_04.tres"

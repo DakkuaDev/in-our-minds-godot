@@ -2,7 +2,6 @@ extends Control
 
 @onready var options_menu = $Panel/OptionsMenu
 
-
 func _ready():
 	visible = false
 	
@@ -32,8 +31,7 @@ func _on_btn_main_menu_button_down() -> void:
 	
 	pass
 
-
-func _on_btn_options_button_down():
+func _on_btn_options_button_down() -> void: # don´t use. (WIP)
 	options_menu.visible = true
 	
 	pass 

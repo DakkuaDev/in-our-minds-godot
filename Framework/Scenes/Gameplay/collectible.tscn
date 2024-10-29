@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhaxydo1yrweq"]
+[gd_scene load_steps=10 format=3 uid="uid://dhaxydo1yrweq"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/Gameplay/Collectible.gd" id="1_s46d5"]
 [ext_resource type="AudioStream" uid="uid://dnetj4il4nd84" path="res://Demo Game/Sounds/level-up-3-199576.mp3" id="2_hu1y0"]
@@ -17,6 +17,12 @@ emission = Color(1, 1, 1, 1)
 billboard_mode = 1
 billboard_keep_scale = true
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_flib3"]
+
+[sub_resource type="PointMesh" id="PointMesh_mj5u3"]
+
+[sub_resource type="Skin" id="Skin_x8gr1"]
+
 [node name="Collectible" type="Node3D"]
 script = ExtResource("1_s46d5")
 
@@ -28,15 +34,19 @@ bus = &"SFX"
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("SphereShape3D_6tgex")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D/CollisionShape3D"]
-transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 mesh = SubResource("QuadMesh_inn2a")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_mhm8o")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.5
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+visibility_aabb = AABB(-1.00509, -0.964352, -1.10995, 2.01018, 1.9287, 2.2199)
+process_material = SubResource("ShaderMaterial_flib3")
+draw_pass_1 = SubResource("PointMesh_mj5u3")
+draw_skin = SubResource("Skin_x8gr1")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

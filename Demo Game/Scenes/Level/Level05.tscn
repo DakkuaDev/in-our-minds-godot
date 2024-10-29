@@ -18002,7 +18002,6 @@ description = "LEVEL_5_2_DESCRIPTION"
 
 [node name="Collectible" parent="." instance=ExtResource("5_3g7w2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4601, -0.504922, 10.9053)
-url = "los-ataques-de-panico/"
 
 [node name="Blocking" type="Node" parent="."]
 

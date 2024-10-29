@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bu6csgumns604"]
+[gd_scene load_steps=8 format=3 uid="uid://bu6csgumns604"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/Gameplay/Player.gd" id="1_4tf07"]
 [ext_resource type="AudioStream" uid="uid://by0sqba0wbuqa" path="res://Demo Game/Sounds/movement-swipe-whoosh-1-186575.mp3" id="1_6a6ar"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qcqbx"]
 bounce = 0.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6ygxl"]
+radius = 0.125564
 
 [sub_resource type="SphereMesh" id="SphereMesh_hj62t"]
 
@@ -25,6 +28,7 @@ linear_damp = 0.8
 script = ExtResource("1_4tf07")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Marble"]
+shape = SubResource("SphereShape3D_6ygxl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Marble"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)

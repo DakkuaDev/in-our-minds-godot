@@ -14,8 +14,6 @@ extends Control
 @onready var audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
 
 
-const FULL_SCREEN_INDEX : int = 4
-
 func _ready():
 	AudioManager.play_music("music_theme_01", true, true, true, 2.0)
 
@@ -47,18 +45,6 @@ func _on_btn_options_button_down() -> void:
 	
 	pass 
 	
-func _on_fullscreen() -> void:
-	if(GameManager.full_screen_mode):
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		#popup_menu.set_item_checked(FULL_SCREEN_INDEX, false)
-		GameManager.full_screen_mode = false
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-		#popup_menu.set_item_checked(FULL_SCREEN_INDEX, true)
-		GameManager.full_screen_mode = true
-	
-	pass
-	
 func _on_btn_exit_button_down() -> void:
 	_on_play_button_sound()
 	
@@ -69,7 +55,7 @@ func _on_btn_exit_button_down() -> void:
 func _on_btn_github_button_down() -> void:
 	_on_play_button_sound()
 	
-	OS.shell_open("https://github.com/DakkuaDev/in-our-minds-godot")
+	OS.shell_open("https://github.com/DakkuaDev/in-our-minds-godot") # Change this with your own repo !
 	
 	pass 
 	

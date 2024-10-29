@@ -1,17 +1,14 @@
 extends Control
 
 @export var chrono: Node
+@export var collectible_base_url : String = "https://entiendetumente.info/"
 
 @onready var panel_container : PanelContainer = $PanelContainer
 @onready var level_label: Label = $PanelContainer/VBoxContainer/LevelLabel
 @onready var description_label : Label = $PanelContainer/DescriptionLabel
 @onready var stamina_progress_bar : TextureProgressBar = $PanelContainer/StaminaProgressBar
-@onready var collectible_popup_menu : PopupMenu = $PanelContainer/CollectiblePopupMenu
 
-
-var action_popup_base_url : String = "https://entiendetumente.info/"
 var url = ""
-
 
 func _ready():
 	SceneManager.scene_changed.connect(GameManager._on_scene_changed)
@@ -49,10 +46,12 @@ func _on_show_description(messg : String, state: bool) -> void:
 	
 func _on_show_collectible(endpoint : String, state: bool) -> void:
 	if(state): 
-		collectible_popup_menu.show()
-		url = action_popup_base_url + endpoint
-	else: 
-		collectible_popup_menu.hide()
+		url = collectible_base_url + endpoint
+		
+		OS.shell_open(url)
+		
+		GameManager._freeze_game(true)
+		PauseMenu.visible = true
 	
 	pass
 	
@@ -77,13 +76,3 @@ func _reset_stamina_progress_bar() -> void:
 	
 	pass
 
-func _on_popup_menu_id_pressed(id):
-	match(id):
-		1: 
-			OS.shell_open(url)
-		2: 
-			_on_show_collectible("", false)
-		
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		
-	pass 

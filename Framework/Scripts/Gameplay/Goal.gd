@@ -45,9 +45,9 @@ func _go_next_level() -> void:
 			GameManager._on_show_chapter_menu()  # next scene is shows chapter menu
 			pass
 	else:	
-		if(scene == ""): #if there is not scene set, reset the game (provisional)
+		if(scene == ""): # if there is not scene set, reset the game 
 			GameManager._reset_game()
-		else: # change to a new scene and set the mouse options
+		else: 
 			SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			
