@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://u1ste3xwb1kk"
+path="res://.godot/imported/move-of-love-inspiring-piano-187549.mp3-64b89c2ee8521c649960062ab7f40869.mp3str"
+
+[deps]
+
+source_file="res://Demo Game/Music/move-of-love-inspiring-piano-187549.mp3"
+dest_files=["res://.godot/imported/move-of-love-inspiring-piano-187549.mp3-64b89c2ee8521c649960062ab7f40869.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

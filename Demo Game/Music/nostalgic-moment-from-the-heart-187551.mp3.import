@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xupa0emdk7nu"
+path="res://.godot/imported/nostalgic-moment-from-the-heart-187551.mp3-f33c90ea03535c18b8634409f0d7fa2c.mp3str"
+
+[deps]
+
+source_file="res://Demo Game/Music/nostalgic-moment-from-the-heart-187551.mp3"
+dest_files=["res://.godot/imported/nostalgic-moment-from-the-heart-187551.mp3-f33c90ea03535c18b8634409f0d7fa2c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

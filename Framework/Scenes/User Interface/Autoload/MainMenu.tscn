@@ -1,0 +1,170 @@
+[gd_scene load_steps=12 format=3 uid="uid://b86b0yak15nww"]
+
+[ext_resource type="Script" path="res://Framework/Scripts/User Interface/MainMenu.gd" id="1_7lg0u"]
+[ext_resource type="AudioStream" uid="uid://bil3plmymhbr7" path="res://Demo Game/Sounds/click-button-140881.mp3" id="2_vtvt4"]
+[ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Demo Game/Fonts/Quicksand-VariableFont_wght.ttf" id="3_ruh7k"]
+[ext_resource type="Texture2D" uid="uid://6ie3u6wa5fv" path="res://Demo Game/Textures/User Interface/github-icon.png" id="4_qwcnm"]
+[ext_resource type="Texture2D" uid="uid://dtd3dnvubtqbk" path="res://Demo Game/Textures/User Interface/game-info-icon.png" id="5_rba1x"]
+[ext_resource type="FontFile" uid="uid://8itkrwr5dc7v" path="res://Demo Game/Fonts/static/Quicksand-Light.ttf" id="6_yfrk5"]
+[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Demo Game/Fonts/static/Quicksand-Regular.ttf" id="7_20sex"]
+[ext_resource type="PackedScene" uid="uid://cls1e4ywuc8sl" path="res://Framework/Scenes/User Interface/OptionsMenu.tscn" id="8_ty68w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7bs18"]
+font = ExtResource("3_ruh7k")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_pm101"]
+font = ExtResource("6_yfrk5")
+
+[sub_resource type="LabelSettings" id="LabelSettings_irdiu"]
+font = ExtResource("7_20sex")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7lg0u")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vtvt4")
+bus = &"SFX"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 309.0
+offset_right = -309.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="LblTitle" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "GAME_TITLE"
+label_settings = SubResource("LabelSettings_7bs18")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LblVersion" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "v27.10.2024a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnStart" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "START_GAME"
+
+[node name="BtnOptions" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "GAME_OPTIONS"
+
+[node name="BtnExit" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "EXIT_GAME"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="BtnGithub" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+action_mode = 0
+icon = ExtResource("4_qwcnm")
+flat = true
+icon_alignment = 1
+
+[node name="BtnAbout" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+action_mode = 0
+icon = ExtResource("5_rba1x")
+flat = true
+icon_alignment = 1
+
+[node name="AboutPanel" type="Panel" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/AboutPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LblAbout" type="Label" parent="Panel/AboutPanel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "ABOUT_TEXT"
+label_settings = SubResource("LabelSettings_pm101")
+autowrap_mode = 2
+text_overrun_behavior = 2
+
+[node name="LblCredits" type="Label" parent="Panel/AboutPanel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.5
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+text = "CREDITS_TEXT"
+label_settings = SubResource("LabelSettings_irdiu")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+text_overrun_behavior = 2
+
+[node name="DebugTextEdit" type="TextEdit" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_right = 248.0
+offset_bottom = 99.0
+placeholder_text = "Level01"
+
+[node name="OptionsMenu" parent="Panel" instance=ExtResource("8_ty68w")]
+visible = false
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Panel/VBoxContainer/BtnStart" to="." method="_on_btn_start_button_down"]
+[connection signal="button_down" from="Panel/VBoxContainer/BtnOptions" to="." method="_on_btn_options_button_down"]
+[connection signal="button_down" from="Panel/VBoxContainer/BtnExit" to="." method="_on_btn_exit_button_down"]
+[connection signal="button_down" from="Panel/VBoxContainer/HBoxContainer/BtnGithub" to="." method="_on_btn_github_button_down"]
+[connection signal="button_down" from="Panel/VBoxContainer/HBoxContainer/BtnAbout" to="." method="_on_btn_about_button_down"]

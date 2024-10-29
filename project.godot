@@ -11,23 +11,23 @@ config_version=5
 [application]
 
 config/name="In our Minds"
-run/main_scene="res://Scenes/Screens/MainMenu.tscn"
+run/main_scene="res://Framework/Scenes/User Interface/Autoload/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="res://Config/default_bus_layout.tres"
+buses/default_bus_layout="res://Demo Game/Config/default_bus_layout.tres"
 
 [autoload]
 
 CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
 SceneManager="*res://addons/scene_manager/scene_manager.tscn"
 Scenes="*res://addons/scene_manager/scenes.gd"
-Gui="*res://Scenes/Objects/Autoload/gui.tscn"
-AudioManager="*res://Scenes/Objects/Autoload/audio_manager.tscn"
-GameManager="*res://Scenes/Objects/Autoload/game_manager.tscn"
-PauseMenu="*res://Scenes/Objects/Autoload/pause_menu.tscn"
+Gui="*res://Framework/Scenes/User Interface/Autoload/GUI.tscn"
+AudioManager="*res://Framework/Scenes/Gameplay/Autoload/audio_manager.tscn"
+GameManager="*res://Framework/Scenes/Gameplay/Autoload/game_manager.tscn"
+PauseMenu="*res://Framework/Scenes/User Interface/PauseMenu.tscn"
 
 [display]
 
@@ -93,7 +93,7 @@ DEBUG_MODE={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Translation/in-our-minds-godot-translations.en.translation", "res://Translation/in-our-minds-godot-translations.es.translation")
+locale/translations=PackedStringArray("res://Demo Game/Translation/in-our-minds-godot-translations.en.translation", "res://Demo Game/Translation/in-our-minds-godot-translations.es.translation")
 
 [layer_names]
 

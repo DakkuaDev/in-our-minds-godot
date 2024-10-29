@@ -1,0 +1,191 @@
+[gd_scene load_steps=14 format=3 uid="uid://cls1e4ywuc8sl"]
+
+[ext_resource type="Script" path="res://Framework/Scripts/User Interface/OptionsMenu.gd" id="1_k4yqp"]
+[ext_resource type="FontFile" uid="uid://cybtmyt2i1ijr" path="res://Demo Game/Fonts/static/Quicksand-Bold.ttf" id="2_msp8r"]
+[ext_resource type="AudioStream" uid="uid://cs71wit0myv4f" path="res://Demo Game/Sounds/cardsound32562-37691.mp3" id="2_ou2ju"]
+[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Demo Game/Fonts/static/Quicksand-Regular.ttf" id="3_gkfl4"]
+[ext_resource type="Texture2D" uid="uid://divxswjg8pmvi" path="res://Demo Game/Textures/User Interface/es-flag.png" id="3_gluwe"]
+[ext_resource type="Texture2D" uid="uid://c7au12xkkwvb0" path="res://Demo Game/Textures/User Interface/en-flag.png" id="5_lo6ay"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v2qbl"]
+font = ExtResource("2_msp8r")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wqy0a"]
+font = ExtResource("3_gkfl4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vey7k"]
+font = ExtResource("2_msp8r")
+
+[sub_resource type="LabelSettings" id="LabelSettings_1mobu"]
+font = ExtResource("3_gkfl4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vgh02"]
+font = ExtResource("3_gkfl4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_e131w"]
+font = ExtResource("3_gkfl4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_urr0r"]
+font = ExtResource("3_gkfl4")
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k4yqp")
+en_flag = ExtResource("5_lo6ay")
+es_fag = ExtResource("3_gluwe")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ou2ju")
+bus = &"SFX"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -141.0
+offset_right = 263.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="LanguageSelection" type="Label" parent="Panel/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "LANGUAGE_SELECTION"
+label_settings = SubResource("LabelSettings_v2qbl")
+
+[node name="LangugageSelectionContainer" type="GridContainer" parent="Panel/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 2
+
+[node name="LanguageSelectionLabel" type="Label" parent="Panel/Panel/VBoxContainer/LangugageSelectionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "LANGUAGE_SELECTION"
+label_settings = SubResource("LabelSettings_wqy0a")
+
+[node name="OptionButton" type="OptionButton" parent="Panel/Panel/VBoxContainer/LangugageSelectionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 2
+selected = 0
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Spanish"
+popup/item_1/id = 1
+
+[node name="FlagSprite2D" type="Sprite2D" parent="Panel/Panel/VBoxContainer/LangugageSelectionContainer"]
+position = Vector2(247.25, 16)
+scale = Vector2(0.395349, 0.416667)
+texture = ExtResource("5_lo6ay")
+
+[node name="ScreenOptions" type="Label" parent="Panel/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "SCREEN_OPTIONS"
+label_settings = SubResource("LabelSettings_vey7k")
+
+[node name="ScreenOptionsContainer" type="GridContainer" parent="Panel/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 0
+columns = 2
+
+[node name="FullScreenModeLabel" type="Label" parent="Panel/Panel/VBoxContainer/ScreenOptionsContainer"]
+layout_mode = 2
+text = "FULLSCREEN_MODE"
+label_settings = SubResource("LabelSettings_1mobu")
+
+[node name="FullScreenMode" type="CheckBox" parent="Panel/Panel/VBoxContainer/ScreenOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="SoundOptions" type="Label" parent="Panel/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "SOUND_SETTINGS"
+
+[node name="SoundOptionsContainer" type="GridContainer" parent="Panel/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 0
+columns = 2
+
+[node name="Master" type="Label" parent="Panel/Panel/VBoxContainer/SoundOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MASTER_SLIDER"
+label_settings = SubResource("LabelSettings_vgh02")
+
+[node name="MasterSlider" type="HSlider" parent="Panel/Panel/VBoxContainer/SoundOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Music" type="Label" parent="Panel/Panel/VBoxContainer/SoundOptionsContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MUSIC_SLIDER"
+label_settings = SubResource("LabelSettings_e131w")
+
+[node name="MusicSlider" type="HSlider" parent="Panel/Panel/VBoxContainer/SoundOptionsContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFX" type="Label" parent="Panel/Panel/VBoxContainer/SoundOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SFX_SLIDER"
+label_settings = SubResource("LabelSettings_urr0r")
+
+[node name="SFXSlider" type="HSlider" parent="Panel/Panel/VBoxContainer/SoundOptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 10.0
+step = 0.5
+value = 10.0
+
+[connection signal="item_selected" from="Panel/Panel/VBoxContainer/LangugageSelectionContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="toggled" from="Panel/Panel/VBoxContainer/ScreenOptionsContainer/FullScreenMode" to="." method="_on_full_screen_mode_toggled"]
+[connection signal="value_changed" from="Panel/Panel/VBoxContainer/SoundOptionsContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="Panel/Panel/VBoxContainer/SoundOptionsContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Panel/Panel/VBoxContainer/SoundOptionsContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
