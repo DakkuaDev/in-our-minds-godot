@@ -13,6 +13,8 @@ extends Control
 @onready var level_label: Label = $PanelContainer/VBoxContainer/LevelLabel  # Label to display the current level.
 @onready var description_label: Label = $PanelContainer/DescriptionLabel  # Label to show descriptions.
 @onready var stamina_progress_bar: TextureProgressBar = $PanelContainer/StaminaProgressBar  # Progress bar for stamina management.
+@onready var background_panel_description = $BackgroundPanelDescription
+
 
 var url = ""  # URL for the collectible to be opened.
 
@@ -58,6 +60,7 @@ func _on_show_description(messg: String, state: bool) -> void:
 	# @param state: bool - True to show the description label, false to hide it.
 	description_label.visible = state  # Set the visibility of the description label.
 	description_label.text = messg  # Update the text of the description label.
+	background_panel_description.visible = state
 	
 	pass
 	

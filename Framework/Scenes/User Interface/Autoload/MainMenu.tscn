@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b86b0yak15nww"]
+[gd_scene load_steps=12 format=3 uid="uid://b86b0yak15nww"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/User Interface/MainMenu.gd" id="1_7lg0u"]
 [ext_resource type="AudioStream" uid="uid://bil3plmymhbr7" path="res://Game Demo/Sounds/click-button-140881.mp3" id="2_vtvt4"]
@@ -6,19 +6,22 @@
 [ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Game Demo/Fonts/Quicksand-VariableFont_wght.ttf" id="3_ruh7k"]
 [ext_resource type="Texture2D" uid="uid://6ie3u6wa5fv" path="res://Game Demo/Textures/User Interface/github-icon.png" id="4_qwcnm"]
 [ext_resource type="Texture2D" uid="uid://dtd3dnvubtqbk" path="res://Game Demo/Textures/User Interface/game-info-icon.png" id="5_rba1x"]
-[ext_resource type="FontFile" uid="uid://8itkrwr5dc7v" path="res://Game Demo/Fonts/static/Quicksand-Light.ttf" id="6_yfrk5"]
-[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Game Demo/Fonts/static/Quicksand-Regular.ttf" id="7_20sex"]
 [ext_resource type="PackedScene" uid="uid://cls1e4ywuc8sl" path="res://Framework/Scenes/User Interface/OptionsMenu.tscn" id="8_ty68w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7bs18"]
 font = ExtResource("3_ruh7k")
 font_size = 35
 
-[sub_resource type="LabelSettings" id="LabelSettings_pm101"]
-font = ExtResource("6_yfrk5")
+[sub_resource type="LabelSettings" id="LabelSettings_c7fcp"]
+font = ExtResource("3_ruh7k")
 
-[sub_resource type="LabelSettings" id="LabelSettings_irdiu"]
-font = ExtResource("7_20sex")
+[sub_resource type="LabelSettings" id="LabelSettings_lv705"]
+font = ExtResource("3_ruh7k")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_eww1b"]
+font = ExtResource("3_ruh7k")
+font_size = 25
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -71,7 +74,8 @@ vertical_alignment = 1
 
 [node name="LblVersion" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "v27.10.2024a"
+text = "v1.0.0"
+label_settings = SubResource("LabelSettings_c7fcp")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -128,35 +132,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LblAbout" type="Label" parent="Panel/AboutPanel/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/AboutPanel/Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.1
-anchor_right = 0.9
-anchor_bottom = 0.5
+anchor_left = 0.075
+anchor_top = 0.15
+anchor_right = 0.925
+anchor_bottom = 0.85
 grow_horizontal = 2
 grow_vertical = 2
-text = "ABOUT_TEXT"
-label_settings = SubResource("LabelSettings_pm101")
-horizontal_alignment = 1
-autowrap_mode = 2
+alignment = 1
 
-[node name="LblCredits" type="Label" parent="Panel/AboutPanel/Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.5
-anchor_right = 0.9
-anchor_bottom = 0.9
-grow_horizontal = 2
-grow_vertical = 2
-text = "CREDITS_TEXT"
-label_settings = SubResource("LabelSettings_irdiu")
+[node name="LblAbout" type="Label" parent="Panel/AboutPanel/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(800, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "ABOUT_TEXT"
+label_settings = SubResource("LabelSettings_lv705")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
-text_overrun_behavior = 2
+
+[node name="LblCredits" type="Label" parent="Panel/AboutPanel/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "CREDITS_TEXT"
+label_settings = SubResource("LabelSettings_eww1b")
 
 [node name="DebugTextEdit" type="TextEdit" parent="Panel"]
 visible = false

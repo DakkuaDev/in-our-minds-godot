@@ -12494,6 +12494,7 @@ description = "LEVEL_4_DESCRIPTION"
 
 [node name="Collectible" parent="." instance=ExtResource("5_ap5d8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8156, -2.54123, -2.03095)
+endpoint = "aislamiento-social/"
 
 [node name="Blocking" type="Node" parent="."]
 

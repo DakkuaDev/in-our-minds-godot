@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Framework/Scripts/User Interface/ChapterMenu.gd" id="1_2ehpc"]
 [ext_resource type="Texture2D" uid="uid://chsdvl382yh2f" path="res://Game Demo/Textures/Gameplay/Skybox/Epic_BlueSunset_EquiRect_flat.png" id="2_opio3"]
-[ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Game Demo/Fonts/Quicksand-VariableFont_wght.ttf" id="2_owmyr"]
+[ext_resource type="FontFile" uid="uid://bblqs5iarcm1" path="res://Game Demo/Fonts/static/Quicksand-Medium.ttf" id="3_0c8i3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wtg5d"]
-font = ExtResource("2_owmyr")
-font_size = 20
+font = ExtResource("3_0c8i3")
+font_size = 25
 
 [node name="ChapterMenu" type="Control"]
 process_mode = 3

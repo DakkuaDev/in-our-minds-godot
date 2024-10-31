@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Framework/Scripts/User Interface/ChapterMenu.gd" id="1_pt1xx"]
 [ext_resource type="Texture2D" uid="uid://dskx7olfigtja" path="res://Game Demo/Textures/Gameplay/Skybox/Cold Sunset Equirect.png" id="2_oqkui"]
-[ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Game Demo/Fonts/Quicksand-VariableFont_wght.ttf" id="2_ri7wg"]
+[ext_resource type="FontFile" uid="uid://bblqs5iarcm1" path="res://Game Demo/Fonts/static/Quicksand-Medium.ttf" id="3_8t3ay"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2cofj"]
-font = ExtResource("2_ri7wg")
-font_size = 20
+font = ExtResource("3_8t3ay")
+font_size = 25
 
 [node name="ChapterMenu" type="Control"]
 process_mode = 3
