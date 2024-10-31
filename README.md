@@ -1,4 +1,4 @@
-# In our Minds 
+# In our Minds - Game & Framework
 
 In Our Minds (Provisional Title) is a development framework in Godot Engine 4.0 designed for game creators interested in exploring deep, engaging narratives. This project serves as both a solid structural template and a demo that showcases its capabilities, ideal for casual platformer games with emotional depth.
 

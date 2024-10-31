@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://db032jmw8wnnk"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/User Interface/ChapterMenu.gd" id="1_22yvn"]
-[ext_resource type="FontFile" uid="uid://bblqs5iarcm1" path="res://Game Demo/Fonts/static/Quicksand-Medium.ttf" id="2_hv6hl"]
+[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Game Demo/Fonts/static/Quicksand-Regular.ttf" id="2_jexqt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lrfnm"]
-font = ExtResource("2_hv6hl")
+font = ExtResource("2_jexqt")
 font_size = 25
 
 [node name="ChapterMenu" type="Control"]

@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Framework/Scripts/User Interface/ChapterMenu.gd" id="1_ai25w"]
 [ext_resource type="Texture2D" uid="uid://sl5bqc18e8jr" path="res://Game Demo/Textures/Gameplay/Skybox/AllSky_Overcast4_Low.png" id="2_3pbwm"]
-[ext_resource type="FontFile" uid="uid://bblqs5iarcm1" path="res://Game Demo/Fonts/static/Quicksand-Medium.ttf" id="3_7o7bi"]
+[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Game Demo/Fonts/static/Quicksand-Regular.ttf" id="3_lsjvk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2cofj"]
-font = ExtResource("3_7o7bi")
+font = ExtResource("3_lsjvk")
 font_size = 25
 
 [node name="ChapterMenu" type="Control"]
