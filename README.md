@@ -1,6 +1,6 @@
 # In our Minds - Game & Framework
 
-In Our Minds (Provisional Title) is a development framework in Godot Engine 4.0 designed for game creators interested in exploring deep, engaging narratives. This project serves as both a solid structural template and a demo that showcases its capabilities, ideal for casual platformer games with emotional depth.
+In Our Minds is a development framework and video game made in Godot Engine 4.0 designed for game creators interested in exploring deep, engaging narratives. This project serves as both a solid structural template and a demo that showcases its capabilities, ideal for casual platformer games with emotional depth.
 
 
 ## Project Overview
@@ -33,7 +33,7 @@ Download the latest framework and demo release from the Releases section to star
 
 ## Contribute
 
-This framework is continually evolving and is part of an ongoing GameJam. Before contributing, please review the required contributor profiles and confirm with me if you meet any of them.
+This framework is continually evolving and is part of an ongoing [**GameJam**](https://itch.io/jam/mental-health-game-dev-champions-2024). Before contributing, please review the required contributor profiles and confirm with me if you meet any of them.
 
 Contributor Guidelines
 Engine Requirement: Godot 4.2 Stable
