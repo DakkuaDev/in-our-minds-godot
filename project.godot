@@ -10,14 +10,21 @@ config_version=5
 
 [application]
 
-config/name="In our Minds"
+config/name="In our Minds - Game & Framework"
+config/description="In Our Minds is a development framework in Godot Engine 4.0 designed for game creators interested in exploring deep, engaging narratives. This project serves as both a solid structural template and a demo that showcases its capabilities, ideal for casual platformer games with emotional depth.
+
+In Our Minds leverages the power of Godot and GDScript to represent the complex emotional landscapes that exist within us all. Each level, designed to function on a casual platform, symbolizes aspects of the human mind, delivering a reflective experience through meaningful yet simple mechanics."
+config/version="1.0.0"
 run/main_scene="res://Framework/Scenes/User Interface/Autoload/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0.862745, 0.180392, 0.298039, 1)
+boot_splash/image="res://Game Demo/Textures/User Interface/splash-screen-logo.png"
+boot_splash/fullsize=false
 config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="res://Demo Game/Config/default_bus_layout.tres"
+buses/default_bus_layout="res://Game Demo/Config/default_bus_layout.tres"
 
 [autoload]
 
@@ -31,8 +38,8 @@ PauseMenu="*res://Framework/Scenes/User Interface/PauseMenu.tscn"
 
 [display]
 
-window/size/viewport_width=1200
-window/size/viewport_height=720
+window/size/mode=3
+window/size/resizable=false
 
 [editor_plugins]
 
@@ -93,7 +100,7 @@ DEBUG_MODE={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Demo Game/Translation/in-our-minds-godot-translations.en.translation", "res://Demo Game/Translation/in-our-minds-godot-translations.es.translation")
+locale/translations=PackedStringArray("res://Game Demo/Translation/in-our-minds-godot-translations.en.translation", "res://Game Demo/Translation/in-our-minds-godot-translations.es.translation")
 
 [layer_names]
 

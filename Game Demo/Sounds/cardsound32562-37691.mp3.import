@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cs71wit0myv4f"
+path="res://.godot/imported/cardsound32562-37691.mp3-40987da1faead573d3f07cde67e08429.mp3str"
+
+[deps]
+
+source_file="res://Game Demo/Sounds/cardsound32562-37691.mp3"
+dest_files=["res://.godot/imported/cardsound32562-37691.mp3-40987da1faead573d3f07cde67e08429.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

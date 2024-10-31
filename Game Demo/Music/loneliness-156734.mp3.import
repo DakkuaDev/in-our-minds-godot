@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boepmlb74s7yg"
+path="res://.godot/imported/loneliness-156734.mp3-3a617b3430e61af6202fb9a212bf7c7e.mp3str"
+
+[deps]
+
+source_file="res://Game Demo/Music/loneliness-156734.mp3"
+dest_files=["res://.godot/imported/loneliness-156734.mp3-3a617b3430e61af6202fb9a212bf7c7e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

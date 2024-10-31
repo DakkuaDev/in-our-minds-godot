@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bu6csgumns604"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/Gameplay/Player.gd" id="1_4tf07"]
-[ext_resource type="AudioStream" uid="uid://by0sqba0wbuqa" path="res://Demo Game/Sounds/movement-swipe-whoosh-1-186575.mp3" id="1_6a6ar"]
+[ext_resource type="AudioStream" uid="uid://by0sqba0wbuqa" path="res://Game Demo/Sounds/movement-swipe-whoosh-1-186575.mp3" id="1_6a6ar"]
 [ext_resource type="Script" path="res://Framework/Scripts/Gameplay/Camera.gd" id="1_d1vl8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qcqbx"]

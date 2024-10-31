@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://du8na0oacq85n"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/Gameplay/Description.gd" id="1_3mdlr"]
-[ext_resource type="AudioStream" uid="uid://dnetj4il4nd84" path="res://Demo Game/Sounds/level-up-3-199576.mp3" id="2_ck0wy"]
-[ext_resource type="Texture2D" uid="uid://dsb2fgahfqpfg" path="res://Demo Game/Textures/Gameplay/description_sprite.png" id="2_opfhn"]
+[ext_resource type="AudioStream" uid="uid://dnetj4il4nd84" path="res://Game Demo/Sounds/level-up-3-199576.mp3" id="2_ck0wy"]
+[ext_resource type="Texture2D" uid="uid://dsb2fgahfqpfg" path="res://Game Demo/Textures/Gameplay/description_sprite.png" id="2_opfhn"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6tgex"]
 radius = 1.0

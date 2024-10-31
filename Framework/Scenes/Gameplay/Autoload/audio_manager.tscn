@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://ckryhgjsdltml"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/Gameplay/AudioManager.gd" id="1_prjud"]
-[ext_resource type="AudioStream" uid="uid://bbkcel1tt7qar" path="res://Demo Game/Music/calm-and-soft-piano-music-250818.mp3" id="2_e8ifq"]
-[ext_resource type="AudioStream" uid="uid://boepmlb74s7yg" path="res://Demo Game/Music/loneliness-156734.mp3" id="3_omm78"]
-[ext_resource type="AudioStream" uid="uid://u1ste3xwb1kk" path="res://Demo Game/Music/move-of-love-inspiring-piano-187549.mp3" id="4_7cywu"]
-[ext_resource type="AudioStream" uid="uid://xupa0emdk7nu" path="res://Demo Game/Music/nostalgic-moment-from-the-heart-187551.mp3" id="5_tg10d"]
-[ext_resource type="AudioStream" uid="uid://bojv8dbiqpqwl" path="res://Demo Game/Music/sadness-in-the-air-this-sad-piano-187553.mp3" id="6_tr70l"]
+[ext_resource type="AudioStream" uid="uid://bbkcel1tt7qar" path="res://Game Demo/Music/calm-and-soft-piano-music-250818.mp3" id="2_e8ifq"]
+[ext_resource type="AudioStream" uid="uid://boepmlb74s7yg" path="res://Game Demo/Music/loneliness-156734.mp3" id="3_omm78"]
+[ext_resource type="AudioStream" uid="uid://u1ste3xwb1kk" path="res://Game Demo/Music/move-of-love-inspiring-piano-187549.mp3" id="4_7cywu"]
+[ext_resource type="AudioStream" uid="uid://xupa0emdk7nu" path="res://Game Demo/Music/nostalgic-moment-from-the-heart-187551.mp3" id="5_tg10d"]
+[ext_resource type="AudioStream" uid="uid://bojv8dbiqpqwl" path="res://Game Demo/Music/sadness-in-the-air-this-sad-piano-187553.mp3" id="6_tr70l"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_prjud")

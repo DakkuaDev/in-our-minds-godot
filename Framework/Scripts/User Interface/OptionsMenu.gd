@@ -5,7 +5,7 @@
 extends Control 
 
 # Exposed variables
-@export var flag_sprite_dict: Dictionary  # Dictionary for storing flag textures for different languages.
+@export var language_dict: Dictionary  # Dictionary for storing flag textures for different languages.
 
 # Node references for audio buses
 @onready var masterBus = AudioServer.get_bus_index("Master")  # Master audio bus index.
@@ -13,7 +13,7 @@ extends Control
 @onready var musicBus = AudioServer.get_bus_index("Music")  # Music audio bus index.
 
 # Node references for UI components
-@onready var flag_sprite_2d = $Panel/Panel/VBoxContainer/LangugageSelectionContainer/FlagSprite2D  # UI element for displaying the selected language flag.
+@onready var texture_rect_language : TextureRect = $Panel/Panel/VBoxContainer/LangugageSelectionContainer/TextureRectLanguage # UI element for displaying the selected language flag.
 @onready var audio_stream_player = $AudioStreamPlayer  # Audio player for playing sound effects.
 
 # Handles input events for the options menu.
@@ -32,7 +32,7 @@ func _on_option_button_item_selected(index):
 		1: TranslationServer.set_locale("es")  # Set language to Spanish.
 		# Add more languages here
 	
-	flag_sprite_2d.texture = flag_sprite_dict[index]  # Updates the displayed flag sprite.
+	texture_rect_language.texture = language_dict[index]  # Updates the displayed flag sprite.
 
 	pass 
 
@@ -78,4 +78,10 @@ func _on_sfx_slider_value_changed(value) -> void:
 	AudioServer.set_bus_mute(sfxBus, value < 0.15)  # Mute if volume is less than 15%.
 	audio_stream_player.play()  # Play the sound effect.
 
+	pass 
+
+
+func _on_button_button_down():
+	self.visible = false
+	
 	pass 

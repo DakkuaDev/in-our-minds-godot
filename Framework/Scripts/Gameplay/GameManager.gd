@@ -12,7 +12,7 @@ var current_chapter_index: int = -1 # Index of the current chapter or level.
 enum GUI_STATE {ENABLE, DISABLE} # GUI visibility state.
 enum GUI_MODE  {CONTINUE, RESET, STOP} # GUI behavior modes.
 var is_on_game: bool = false # True if the game is currently active.
-var full_screen_mode: bool = false # Whether the game is in fullscreen mode.
+var full_screen_mode: bool = true # Whether the game is in fullscreen mode.
 
 # Initializes game settings and resets the game to start conditions.
 func _ready():

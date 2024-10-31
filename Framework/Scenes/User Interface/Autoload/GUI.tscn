@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://d4n3jrsf5mklr"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/User Interface/GUIManager.gd" id="1_0yc14"]
-[ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Demo Game/Fonts/Quicksand-VariableFont_wght.ttf" id="2_1sx1m"]
+[ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Game Demo/Fonts/Quicksand-VariableFont_wght.ttf" id="2_1sx1m"]
 [ext_resource type="Script" path="res://Framework/Scripts/User Interface/Chrono.gd" id="3_c3ugi"]
-[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Demo Game/Fonts/static/Quicksand-Regular.ttf" id="4_tsbie"]
-[ext_resource type="Texture2D" uid="uid://bb1ncrplwpqri" path="res://Demo Game/Textures/User Interface/stamina-bar-background.png" id="5_oxb7g"]
-[ext_resource type="Texture2D" uid="uid://buwyfcb3i6s74" path="res://Demo Game/Textures/User Interface/stamina-bar-foreground.png" id="6_pumyp"]
+[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Game Demo/Fonts/static/Quicksand-Regular.ttf" id="4_tsbie"]
+[ext_resource type="Texture2D" uid="uid://bb1ncrplwpqri" path="res://Game Demo/Textures/User Interface/stamina-bar-background.png" id="5_oxb7g"]
+[ext_resource type="Texture2D" uid="uid://buwyfcb3i6s74" path="res://Game Demo/Textures/User Interface/stamina-bar-foreground.png" id="6_pumyp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n2582"]
 line_spacing = 1.0
@@ -81,3 +81,26 @@ value = 3.0
 texture_under = ExtResource("5_oxb7g")
 texture_progress = ExtResource("6_pumyp")
 texture_progress_offset = Vector2(65, 25.5)
+
+[node name="BackgroundPanelChrono&Level" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.225
+anchor_bottom = 0.225
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="BackgroundPanelDescription" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.775
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0

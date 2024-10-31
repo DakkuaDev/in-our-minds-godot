@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0plkg7meb4ke"
+path="res://.godot/imported/movement-swipe-whoosh-3-186577.mp3-67fdbd29d164c0c9640d9277e692b921.mp3str"
+
+[deps]
+
+source_file="res://Game Demo/Sounds/movement-swipe-whoosh-3-186577.mp3"
+dest_files=["res://.godot/imported/movement-swipe-whoosh-3-186577.mp3-67fdbd29d164c0c9640d9277e692b921.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

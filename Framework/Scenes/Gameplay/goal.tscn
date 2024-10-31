@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://d22r677i78v52"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/Gameplay/Goal.gd" id="1_wqm5o"]
-[ext_resource type="Texture2D" uid="uid://ca3dcc6bb5n75" path="res://Demo Game/Textures/Gameplay/Player/goal_texture.jpg" id="2_3cw3f"]
-[ext_resource type="AudioStream" uid="uid://dineqagf4oq32" path="res://Demo Game/Sounds/game-level-complete-143022.mp3" id="2_opnkr"]
+[ext_resource type="Texture2D" uid="uid://ca3dcc6bb5n75" path="res://Game Demo/Textures/Gameplay/Player/goal_texture.jpg" id="2_3cw3f"]
+[ext_resource type="AudioStream" uid="uid://dineqagf4oq32" path="res://Game Demo/Sounds/game-level-complete-143022.mp3" id="2_opnkr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q6162"]
 

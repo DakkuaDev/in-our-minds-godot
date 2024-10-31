@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://b86b0yak15nww"]
+[gd_scene load_steps=13 format=3 uid="uid://b86b0yak15nww"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/User Interface/MainMenu.gd" id="1_7lg0u"]
-[ext_resource type="AudioStream" uid="uid://bil3plmymhbr7" path="res://Demo Game/Sounds/click-button-140881.mp3" id="2_vtvt4"]
-[ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Demo Game/Fonts/Quicksand-VariableFont_wght.ttf" id="3_ruh7k"]
-[ext_resource type="Texture2D" uid="uid://6ie3u6wa5fv" path="res://Demo Game/Textures/User Interface/github-icon.png" id="4_qwcnm"]
-[ext_resource type="Texture2D" uid="uid://dtd3dnvubtqbk" path="res://Demo Game/Textures/User Interface/game-info-icon.png" id="5_rba1x"]
-[ext_resource type="FontFile" uid="uid://8itkrwr5dc7v" path="res://Demo Game/Fonts/static/Quicksand-Light.ttf" id="6_yfrk5"]
-[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Demo Game/Fonts/static/Quicksand-Regular.ttf" id="7_20sex"]
+[ext_resource type="AudioStream" uid="uid://bil3plmymhbr7" path="res://Game Demo/Sounds/click-button-140881.mp3" id="2_vtvt4"]
+[ext_resource type="Texture2D" uid="uid://be1tuimgscb7e" path="res://Game Demo/Textures/User Interface/main-menu-bg.png" id="3_ik7nj"]
+[ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Game Demo/Fonts/Quicksand-VariableFont_wght.ttf" id="3_ruh7k"]
+[ext_resource type="Texture2D" uid="uid://6ie3u6wa5fv" path="res://Game Demo/Textures/User Interface/github-icon.png" id="4_qwcnm"]
+[ext_resource type="Texture2D" uid="uid://dtd3dnvubtqbk" path="res://Game Demo/Textures/User Interface/game-info-icon.png" id="5_rba1x"]
+[ext_resource type="FontFile" uid="uid://8itkrwr5dc7v" path="res://Game Demo/Fonts/static/Quicksand-Light.ttf" id="6_yfrk5"]
+[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Game Demo/Fonts/static/Quicksand-Regular.ttf" id="7_20sex"]
 [ext_resource type="PackedScene" uid="uid://cls1e4ywuc8sl" path="res://Framework/Scenes/User Interface/OptionsMenu.tscn" id="8_ty68w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7bs18"]
@@ -32,13 +33,21 @@ script = ExtResource("1_7lg0u")
 stream = ExtResource("2_vtvt4")
 bus = &"SFX"
 
+[node name="TextureRectBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ik7nj")
+expand_mode = 1
+
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 3.0
-offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -108,8 +117,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -3.0
-offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -132,8 +139,8 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "ABOUT_TEXT"
 label_settings = SubResource("LabelSettings_pm101")
+horizontal_alignment = 1
 autowrap_mode = 2
-text_overrun_behavior = 2
 
 [node name="LblCredits" type="Label" parent="Panel/AboutPanel/Panel"]
 layout_mode = 1

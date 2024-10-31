@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bojv8dbiqpqwl"
+path="res://.godot/imported/sadness-in-the-air-this-sad-piano-187553.mp3-082c3653a4d8c3f07585137861361922.mp3str"
+
+[deps]
+
+source_file="res://Game Demo/Music/sadness-in-the-air-this-sad-piano-187553.mp3"
+dest_files=["res://.godot/imported/sadness-in-the-air-this-sad-piano-187553.mp3-082c3653a4d8c3f07585137861361922.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

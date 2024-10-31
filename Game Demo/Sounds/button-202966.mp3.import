@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://u7wybi6neddm"
+path="res://.godot/imported/button-202966.mp3-1e61181c81d734ac2098ad6a8f065913.mp3str"
+
+[deps]
+
+source_file="res://Game Demo/Sounds/button-202966.mp3"
+dest_files=["res://.godot/imported/button-202966.mp3-1e61181c81d734ac2098ad6a8f065913.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

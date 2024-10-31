@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c4m4rafa8f7v0"
+
+[deps]
+
+files=["res://Game Demo/Translation/in-our-minds-godot-translations.en.translation", "res://Game Demo/Translation/in-our-minds-godot-translations.es.translation"]
+
+source_file="res://Game Demo/Translation/in-our-minds-godot-translations.csv"
+dest_files=["res://Game Demo/Translation/in-our-minds-godot-translations.en.translation", "res://Game Demo/Translation/in-our-minds-godot-translations.es.translation"]
+
+[params]
+
+compress=true
+delimiter=0

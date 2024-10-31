@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnetj4il4nd84"
+path="res://.godot/imported/level-up-3-199576.mp3-5ef7d876e1c3768b751548bda754c2f9.mp3str"
+
+[deps]
+
+source_file="res://Game Demo/Sounds/level-up-3-199576.mp3"
+dest_files=["res://.godot/imported/level-up-3-199576.mp3-5ef7d876e1c3768b751548bda754c2f9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

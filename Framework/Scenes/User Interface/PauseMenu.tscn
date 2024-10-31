@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://crghgtuhh56fe"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/User Interface/PauseMenu.gd" id="1_0nbh7"]
-[ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Demo Game/Fonts/Quicksand-VariableFont_wght.ttf" id="2_a3kq2"]
+[ext_resource type="FontFile" uid="uid://ckv4g6uel7i3t" path="res://Game Demo/Fonts/Quicksand-VariableFont_wght.ttf" id="2_a3kq2"]
 [ext_resource type="PackedScene" uid="uid://cls1e4ywuc8sl" path="res://Framework/Scenes/User Interface/OptionsMenu.tscn" id="3_wtyo0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kl5s2"]

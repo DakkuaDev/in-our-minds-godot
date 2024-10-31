@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8ggtn7wfrdof"
+path="res://.godot/imported/3-up-3-89188.mp3-832339d5ce2033d7157e0826a6932147.mp3str"
+
+[deps]
+
+source_file="res://Game Demo/Sounds/3-up-3-89188.mp3"
+dest_files=["res://.godot/imported/3-up-3-89188.mp3-832339d5ce2033d7157e0826a6932147.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

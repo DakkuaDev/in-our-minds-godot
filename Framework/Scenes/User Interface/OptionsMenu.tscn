@@ -1,11 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://cls1e4ywuc8sl"]
+[gd_scene load_steps=15 format=3 uid="uid://cls1e4ywuc8sl"]
 
 [ext_resource type="Script" path="res://Framework/Scripts/User Interface/OptionsMenu.gd" id="1_k4yqp"]
-[ext_resource type="FontFile" uid="uid://cybtmyt2i1ijr" path="res://Demo Game/Fonts/static/Quicksand-Bold.ttf" id="2_msp8r"]
-[ext_resource type="AudioStream" uid="uid://cs71wit0myv4f" path="res://Demo Game/Sounds/cardsound32562-37691.mp3" id="2_ou2ju"]
-[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Demo Game/Fonts/static/Quicksand-Regular.ttf" id="3_gkfl4"]
-[ext_resource type="Texture2D" uid="uid://divxswjg8pmvi" path="res://Demo Game/Textures/User Interface/es-flag.png" id="3_gluwe"]
-[ext_resource type="Texture2D" uid="uid://c7au12xkkwvb0" path="res://Demo Game/Textures/User Interface/en-flag.png" id="5_lo6ay"]
+[ext_resource type="FontFile" uid="uid://cybtmyt2i1ijr" path="res://Game Demo/Fonts/static/Quicksand-Bold.ttf" id="2_msp8r"]
+[ext_resource type="AudioStream" uid="uid://cs71wit0myv4f" path="res://Game Demo/Sounds/cardsound32562-37691.mp3" id="2_ou2ju"]
+[ext_resource type="FontFile" uid="uid://bxpy77eotkdkx" path="res://Game Demo/Fonts/static/Quicksand-Regular.ttf" id="3_gkfl4"]
+[ext_resource type="Texture2D" uid="uid://divxswjg8pmvi" path="res://Game Demo/Textures/User Interface/es-flag.png" id="3_gluwe"]
+[ext_resource type="Texture2D" uid="uid://c7au12xkkwvb0" path="res://Game Demo/Textures/User Interface/en-flag.png" id="5_lo6ay"]
+[ext_resource type="Texture2D" uid="uid://cny27y6h34t0j" path="res://Game Demo/Textures/User Interface/option-menu-background.png" id="5_un8kq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v2qbl"]
 font = ExtResource("2_msp8r")
@@ -36,7 +37,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k4yqp")
-flag_sprite_dict = {
+language_dict = {
 0: ExtResource("5_lo6ay"),
 1: ExtResource("3_gluwe")
 }
@@ -52,6 +53,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRectbackground" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -16.0
+offset_right = -39.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("5_un8kq")
+expand_mode = 1
+stretch_mode = 3
 
 [node name="Panel" type="Panel" parent="Panel"]
 layout_mode = 1
@@ -87,13 +106,18 @@ label_settings = SubResource("LabelSettings_v2qbl")
 [node name="LangugageSelectionContainer" type="GridContainer" parent="Panel/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
-columns = 2
+columns = 3
 
 [node name="LanguageSelectionLabel" type="Label" parent="Panel/Panel/VBoxContainer/LangugageSelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "LANGUAGE_SELECTION"
 label_settings = SubResource("LabelSettings_wqy0a")
+
+[node name="TextureRectLanguage" type="TextureRect" parent="Panel/Panel/VBoxContainer/LangugageSelectionContainer"]
+layout_mode = 2
+texture = ExtResource("5_lo6ay")
+expand_mode = 3
 
 [node name="OptionButton" type="OptionButton" parent="Panel/Panel/VBoxContainer/LangugageSelectionContainer"]
 layout_mode = 2
@@ -104,11 +128,6 @@ popup/item_0/text = "English"
 popup/item_0/id = 0
 popup/item_1/text = "Spanish"
 popup/item_1/id = 1
-
-[node name="FlagSprite2D" type="Sprite2D" parent="Panel/Panel/VBoxContainer/LangugageSelectionContainer"]
-position = Vector2(247.25, 16)
-scale = Vector2(0.395349, 0.416667)
-texture = ExtResource("5_lo6ay")
 
 [node name="ScreenOptions" type="Label" parent="Panel/Panel/VBoxContainer"]
 layout_mode = 2
@@ -130,6 +149,7 @@ label_settings = SubResource("LabelSettings_1mobu")
 [node name="FullScreenMode" type="CheckBox" parent="Panel/Panel/VBoxContainer/ScreenOptionsContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
+button_pressed = true
 
 [node name="SoundOptions" type="Label" parent="Panel/Panel/VBoxContainer"]
 layout_mode = 2
@@ -186,8 +206,13 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 
+[node name="BtnExit" type="Button" parent="Panel/Panel/VBoxContainer"]
+layout_mode = 2
+text = "EXIT_MAIN_MENU"
+
 [connection signal="item_selected" from="Panel/Panel/VBoxContainer/LangugageSelectionContainer/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="toggled" from="Panel/Panel/VBoxContainer/ScreenOptionsContainer/FullScreenMode" to="." method="_on_full_screen_mode_toggled"]
 [connection signal="value_changed" from="Panel/Panel/VBoxContainer/SoundOptionsContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
 [connection signal="value_changed" from="Panel/Panel/VBoxContainer/SoundOptionsContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="Panel/Panel/VBoxContainer/SoundOptionsContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="button_down" from="Panel/Panel/VBoxContainer/BtnExit" to="." method="_on_button_button_down"]
