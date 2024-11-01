@@ -17,9 +17,7 @@ In Our Minds leverages the power of Godot and GDScript to represent the complex 
 config/version="1.0.0"
 run/main_scene="res://Framework/Scenes/User Interface/Autoload/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-boot_splash/bg_color=Color(0.862745, 0.180392, 0.298039, 1)
-boot_splash/image="res://Game Demo/Textures/User Interface/splash-screen-logo.png"
-boot_splash/fullsize=false
+boot_splash/image="res://Game Demo/Textures/User Interface/InOurMinds-cover-image.png"
 config/icon="res://icon.svg"
 
 [audio]
